@@ -190,6 +190,24 @@
     </style></head>
 <body>
 <div class="table-container">
+    <div class="input-section" style="padding: 20px; text-align: center; background: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(0,0,0,0.1);">
+        <h3 style="margin-top: 0; color: #1A2247; font-family: 'Shippori Mincho', serif;">Add a New Japan Reel</h3>
+        <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">Paste an Instagram Reel link to automatically analyze it and add it to this site!</p>
+        <div style="display: flex; max-width: 600px; margin: 0 auto; gap: 10px;">
+            <input type="url" id="reelUrl" placeholder="https://www.instagram.com/reel/..." style="flex: 1; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; outline: none;">
+            <button onclick="submitReel()" style="padding: 12px 24px; background-color: #d84361; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s;">Analyze</button>
+        </div>
+        <script>
+            function submitReel() {
+                const url = document.getElementById('reelUrl').value.trim();
+                if (!url) return alert("Please enter a valid Instagram Reel URL.");
+                const issueTitle = encodeURIComponent("Analyze New Reel");
+                const issueBody = encodeURIComponent(`Please analyze this reel and add it to the site:\n\n${url}`);
+                const githubUrl = `https://github.com/ayush237/japan-trip-analyzer/issues/new?title=${issueTitle}&body=${issueBody}&labels=analyze-reel`;
+                window.open(githubUrl, '_blank');
+            }
+        </script>
+    </div>
 <div class="header">
         Bonus Offbeat Spots &amp; Alternatives
     </div>
