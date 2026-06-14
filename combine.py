@@ -1,0 +1,577 @@
+import json
+
+data = [
+  {
+    "row_id": "row-60",
+    "fascinating_facts": [
+      "The shrine has been largely abandoned since around 2015, with nature reclaiming the site to create an eerie, Angkor Wat-like atmosphere.",
+      "It features a highly decorated and unique torii gate designed by the renowned Kyoto artist Doumoto Insho.",
+      "The mountain was historically a site of ancient nature worship and has ties to the first Tokugawa Shogun."
+    ],
+    "special_notes": [
+      "The path involves hiking through overgrown woods and uneven ground; proper footwear is essential.",
+      "In warmer months, be aware of mosquitoes and venomous pit vipers (mamushi) in the area.",
+      "Despite its abandoned state, it remains a sacred site; maintain a respectful attitude and do not touch sacred objects."
+    ],
+    "reference_links": [
+      "https://www.hiddenpathskyoto.com/",
+      "https://www.greenshinto.com/"
+    ]
+  },
+  {
+    "row_id": "row-61",
+    "fascinating_facts": [
+      "San Jose's Japantown (Nihonmachi) is one of the last three historic Japantowns remaining in the United States.",
+      "Nikaku Animart is the primary spot for anime in the area and is one of the oldest stores of its kind in the U.S.",
+      "It is often confused with San Francisco's Japantown, which has a much larger concentration of dedicated anime-specific retail chains like Kinokuniya."
+    ],
+    "special_notes": [
+      "The selection of dedicated anime merchandise is more limited compared to San Francisco.",
+      "If you are looking for the latest rare figures, locals often recommend visiting larger regional shopping centers like Westfield Valley Fair."
+    ],
+    "reference_links": [
+      "https://www.sanjose.org/",
+      "https://www.gpsmycity.com/"
+    ]
+  },
+  {
+    "row_id": "row-62",
+    "fascinating_facts": [
+      "Domyo is a prestigious studio with over 370 years of history, having been founded in 1652.",
+      "Participants learn the ancient Japanese art of kumihimo (braided silk cords) using authentic tools and 100% silk.",
+      "Kumihimo is considered a meditative practice and was historically used by samurai for spiritual training."
+    ],
+    "special_notes": [
+      "Reservations are required, and cancellations made on the day of the booking incur a 100% charge.",
+      "The studio does not have parking for vehicles or bicycles.",
+      "Visitors are encouraged to maintain a calm, quiet demeanor in line with the meditative nature of the craft."
+    ],
+    "reference_links": [
+      "https://kdomyo.com/",
+      "https://domyo.co.jp/"
+    ]
+  },
+  {
+    "row_id": "row-63",
+    "fascinating_facts": [
+      "LUUP is a popular micro-mobility e-scooter service in Japan.",
+      "No driver's license is required, but riders must be 16 years or older and register with a government-issued ID.",
+      "Before riding, users must pass a traffic rules test within the app with a 100% score."
+    ],
+    "special_notes": [
+      "E-scooters must be ridden on the road (left side), not on sidewalks.",
+      "Riders must perform 'two-stage right turns' at intersections.",
+      "Strict penalties and account suspensions apply for riding under the influence, tandem riding, or using phones while riding."
+    ],
+    "reference_links": [
+      "https://luup.sc/",
+      "https://japan-dev.com/"
+    ]
+  },
+  {
+    "row_id": "row-64",
+    "fascinating_facts": [
+      "Shirakawa-go is a UNESCO World Heritage site renowned for its gassho-zukuri (praying hands) farmhouses.",
+      "Many of the houses are over 250 years old, built without nails, and designed to shed heavy winter snow.",
+      "It is a living village, serving as home to nearly 500 residents."
+    ],
+    "special_notes": [
+      "Respect private property: Do not enter private premises, fields, or houses, and do not peek through windows.",
+      "Littering, camping, fireworks, and flying drones are strictly prohibited.",
+      "Winter streets can be very slippery and fresh snow may obscure hidden ditches; wear appropriate footwear."
+    ],
+    "reference_links": [
+      "https://www.shirakawa.lg.jp/",
+      "https://shirakawa-going.jp/"
+    ]
+  },
+  {
+    "row_id": "row-65",
+    "fascinating_facts": [
+      "Japan places a high value on 'portrait rights' (shozoken), emphasizing privacy and avoiding causing trouble (meiwaku) to others.",
+      "Professional photo shoots at popular parks, shrines, and historic districts often require advance permits and fees."
+    ],
+    "special_notes": [
+      "Always ask for permission before photographing individuals, particularly craftspeople or children.",
+      "Tripods and selfie sticks are often banned in crowded spots, shrines, and train platforms.",
+      "Photography is strictly prohibited inside onsens, changing rooms, and certain sacred shrine areas."
+    ],
+    "reference_links": []
+  },
+  {
+    "row_id": "row-66",
+    "fascinating_facts": [
+      "Switzerland has a highly organized, safe, but famously expensive travel environment.",
+      "The country has a world-class public transport system combining trains, buses, and boats.",
+      "Tap water and public fountains marked 'Trinkwasser' are perfectly safe to drink across the country."
+    ],
+    "special_notes": [
+      "Jaywalking is illegal and can result in on-the-spot police fines.",
+      "You are required to carry a valid ID (like a passport) at all times.",
+      "Respect 'quiet hours' and 'quiet carriages' on trains, as excessive noise is discouraged."
+    ],
+    "reference_links": [
+      "https://www.myswitzerland.com/",
+      "https://www.sbb.ch/"
+    ]
+  },
+  {
+    "row_id": "row-67",
+    "fascinating_facts": [
+      "The clock was designed by Studio Ghibli co-founder Hayao Miyazaki and built by Kunio Shachimaru.",
+      "It is a massive 28-ton steampunk-style structure featuring over 30 mechanical vignettes.",
+      "It frequently draws comparisons to the aesthetics of 'Howl's Moving Castle'."
+    ],
+    "special_notes": [
+      "It performs several times a day (usually 12 PM, 3 PM, 6 PM, 8 PM), with performances starting four minutes before the hour.",
+      "It is located in a public area with no admission fee.",
+      "Visitors should arrive early for a good viewing spot and ensure they do not obstruct public walkways."
+    ],
+    "reference_links": [
+      "https://www.atlasobscura.com/",
+      "https://matcha-jp.com/"
+    ]
+  },
+  {
+    "row_id": "row-68",
+    "fascinating_facts": [
+      "Traditional Japanese cuisine (washoku) is recognized on the UNESCO Intangible Cultural Heritage list.",
+      "Tokyo consistently holds the title for having more 3-star Michelin restaurants than any other city globally.",
+      "The concept of 'umami' (the fifth taste) originated in Japan."
+    ],
+    "special_notes": [
+      "There is no tipping culture in Japan; leaving a tip can be confusing or considered rude.",
+      "Never stick chopsticks upright in a bowl of rice or pass food directly from chopstick to chopstick.",
+      "Always say 'Itadakimasu' before eating and 'Gochisosama deshita' after your meal."
+    ],
+    "reference_links": []
+  },
+  {
+    "row_id": "row-69",
+    "fascinating_facts": [
+      "SAGAN is a minimalist cafe blending traditional Japanese aesthetics with modern design in the Rokurocho district.",
+      "It is widely regarded as a tranquil sanctuary away from Kyoto's busy tourist areas.",
+      "The menu specializes in Japanese-Western fusion breakfasts and specialty coffee."
+    ],
+    "special_notes": [
+      "Maintain low noise levels to respect the reflective atmosphere of the cafe.",
+      "Punctuality is expected if you have made a reservation.",
+      "Do not confuse it with 'Saganoyu', a different cafe located in a former public bathhouse."
+    ],
+    "reference_links": [
+      "https://tabelog.com/",
+      "https://autoreserve.com/"
+    ]
+  },
+  {
+    "row_id": "row-70",
+    "fascinating_facts": [
+      "A goshuin is a hand-brushed calligraphy stamp serving as proof of pilgrimage to a Buddhist temple or Shinto shrine.",
+      "They are collected in a dedicated accordion-style book called a goshuincho.",
+      "They typically feature the name of the site, the date of the visit, and a sacred seal."
+    ],
+    "special_notes": [
+      "This is not a stamp rally; you must pray and pay respects at the main hall before requesting a goshuin.",
+      "Never place secular commemorative stamps (like train station stamps) in your goshuincho.",
+      "Always carry exact cash (usually 300-500 yen) and do not gift your collected goshuin to others."
+    ],
+    "reference_links": [
+      "https://goshuin.com/",
+      "https://www.usjetaa.org/"
+    ]
+  },
+  {
+    "row_id": "row-71",
+    "fascinating_facts": [
+      "Tobishima Yoi no Akari is a summer evening event celebrating the village with thousands of wind chimes illuminated by LEDs.",
+      "The main attraction is a Wind Chime Tunnel featuring 600 glass chimes lit by 30,000 LED bulbs.",
+      "The paper strips (tanzaku) on the chimes feature wishes written by local children and children from disaster-affected areas."
+    ],
+    "special_notes": [
+      "Admission is free, but parking is limited; visitors must use designated hall parking lots.",
+      "Do not drive on roads marked as 'local roads' (jimoto doro) as they are strictly for residents.",
+      "Maintain public harmony by keeping noise levels down and taking all your trash home."
+    ],
+    "reference_links": [
+      "https://www.vill.tobishima.aichi.jp/"
+    ]
+  },
+  {
+    "row_id": "row-72",
+    "fascinating_facts": [
+      "The fastest and most popular way to travel between Hiroshima and Kyoto is the Sanyo Shinkansen (bullet train).",
+      "Direct Shinkansen travel between the two cities typically takes 1.5 to 2 hours.",
+      "Both Hiroshima and Kyoto stations are major transit hubs equipped with extensive dining and shopping options."
+    ],
+    "special_notes": [
+      "If you are traveling with large suitcases, you must book specific 'oversized baggage' seats in advance.",
+      "Some regional rail passes may not cover the direct Shinkansen route, potentially requiring a transfer at Shin-Osaka.",
+      "Book tickets well in advance during peak travel periods like Golden Week or cherry blossom season."
+    ],
+    "reference_links": []
+  },
+  {
+    "row_id": "row-15",
+    "fascinating_facts": "Japan has over 5 million vending machines, extremely punctual trains, zero-tolerance for littering, and slurping noodles is considered a compliment.",
+    "special_notes": "Use rechargeable IC cards instead of JR Pass (often cheaper), stay in capsule hotels, eat at konbini or local shokudo for budget meals. Etiquette: No tipping, remove shoes indoors, bow when greeting, avoid sticking chopsticks upright in rice. Be aware that vegetarian options can be hard to find due to dashi (fish stock).",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-16",
+    "fascinating_facts": "Visit Japan Web is the official free online service by the Japanese government to streamline immigration and customs, replacing paper forms with unified QR codes.",
+    "special_notes": "Take screenshots of your QR codes in case of airport connectivity issues. Each traveler, even in a family, needs their own unique QR code. Register 3-14 days before departure. Paper forms can still be used if needed.",
+    "reference_links": ["https://www.vjw.digital.go.jp/"]
+  },
+  {
+    "row_id": "row-17",
+    "fascinating_facts": "The 'sakura front' moves from west to east and finally north. The beautiful peak of Somei Yoshino cherry blossoms only lasts 10 to 14 days. The Japan Weather Association monitors over 80 locations for exact forecasting.",
+    "special_notes": "In 2025, blooms began late March in Tokyo/Kyoto. For earlier blooms, look for Kawazu-zakura in February. Always take your trash with you after hanami (flower viewing) picnics. Visit early in the morning to beat the heavy crowds. Follow local rules on tarps and fires.",
+    "reference_links": ["https://jwa.or.jp/"]
+  },
+  {
+    "row_id": "row-18",
+    "fascinating_facts": "Located in Nijigen no Mori on Awaji Island, this park brings the Hidden Leaf Village to life with a massive Hokage Rock, life-sized statues, an Ichiraku Ramen shop, and AR scavenger hunts.",
+    "special_notes": "Visitors receive 'ninja scrolls' to complete missions like the Ten no Maki maze. Comfortable shoes are a must. Not recommended for pregnant women or those with mobility issues due to steep slopes. Wheelchairs and strollers are not permitted inside the attraction.",
+    "reference_links": ["https://nijigennomori.com/"]
+  },
+  {
+    "row_id": "row-19",
+    "fascinating_facts": "Japan is deeply rooted in respect and social harmony (omotenashi and meiwaku). The country is incredibly diverse geographically, from snowy Hokkaido to tropical Okinawa.",
+    "special_notes": "Japan is still largely cash-based outside major cities. Rent a pocket Wi-Fi. Do not tip, eat while walking, or leave trash on streets. Tattoos are mostly forbidden in traditional onsens unless covered. Familiarize yourself with earthquake evacuation procedures.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-20",
+    "fascinating_facts": "Kyoto served as Japan's imperial capital for over 1,000 years, holding numerous UNESCO World Heritage sites, traditional tea houses, and the iconic Arashiyama Bamboo Grove.",
+    "special_notes": "Arrive early (before 8 AM) at popular spots to avoid huge crowds. Respect the Geisha culture—do not touch, follow, or photograph Geiko or Maiko in Gion. Do not bring large luggage on city buses; use delivery services instead. Stay off private property.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-21",
+    "fascinating_facts": "A traditional summer dining experience in Kibune where diners catch chilled noodles sliding down a bamboo flume with chopsticks. The kawadoko platforms are built right over the Kibune River, naturally cooling the area.",
+    "special_notes": "Runs early May to late September. Arrive well before 11:00 AM as they do not take advance reservations and lines can take hours. Payment is usually cash only. Often canceled if it rains or if the river floods. The meal itself is fast-paced (about 20 minutes).",
+    "reference_links": ["https://trip.com/"]
+  },
+  {
+    "row_id": "row-22",
+    "fascinating_facts": "Known as 'Swan Beach,' this high-altitude spot on Lake Yamanaka offers expansive views of Mt. Fuji with a large resident swan population accustomed to humans.",
+    "special_notes": "The lake is at an altitude of 980m, so it can get chilly and even freeze in winter. Exercise caution when feeding the swans as they are wild animals. Mt. Fuji is frequently obscured by clouds, so check weather visibility forecasts beforehand.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-23",
+    "fascinating_facts": "The world's first Tangled-themed attraction, located in Tokyo DisneySea's Fantasy Springs. It is a romantic 5-minute boat ride culminating in the iconic lantern scene.",
+    "special_notes": "Requires a free Standby Pass or paid Disney Premier Access to enter, which sell out extremely fast upon park opening. Expect long wait times. Follow staff instructions and avoid flash photography or screens during the dark sections of the ride.",
+    "reference_links": ["https://www.tokyodisneyresort.jp/"]
+  },
+  {
+    "row_id": "row-24",
+    "fascinating_facts": "Dressing in a traditional kimono involves many layers, an obi sash, tabi socks, and zori sandals. Walking the historic streets of Kyoto in kimono is a deeply immersive cultural experience.",
+    "special_notes": "Book well in advance for morning slots to get the best patterns. Expect additional upgrade fees for premium designs. Zori sandals can be tough to walk in on hilly streets; consider taking taxis to save energy. In summer, opt for a lighter cotton yukata instead.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-25",
+    "fascinating_facts": "Kyoto is incredibly safe but strict on rules to preserve its 1,000-year-old heritage. The city features thousands of classical Buddhist temples, gardens, and Shinto shrines.",
+    "special_notes": "No eating while walking or littering; carry your trash. In the Gion district, photographing Geisha/Maiko without permission on private streets is strictly prohibited and can result in fines. Use IC cards for transit, but avoid taking large suitcases onto local buses.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-26",
+    "fascinating_facts": "Founded in 727, Katsuoji is the 'Temple of Victory' in Minoh, Osaka. The grounds are covered in thousands of Daruma dolls left by visitors who achieved their goals.",
+    "special_notes": "Reached by bus from Minoo-kayano Station. Takes 1.5-2 hours to explore, with uphill walking. Maintain a respectful, quiet demeanor. Use the chozuya to purify your hands before entering, and do not step on the wooden thresholds of gates.",
+    "reference_links": ["https://katsuo-ji-temple.or.jp/"]
+  },
+  {
+    "row_id": "row-27",
+    "fascinating_facts": "A modern ryokan-style hotel just minutes from Kyoto Station. The entire property is covered in tatami mats, meaning guests walk barefoot or in socks after removing their shoes at the entrance.",
+    "special_notes": "Offers excellent free perks like natural hot springs, evening ramen, and morning yogurt. Can get crowded during breakfast and bathing times. Some rooms might smell slightly of the tatami mats; ask the front desk to change rooms if needed.",
+    "reference_links": []
+  },
+  {
+    "row_id": "row-28",
+    "fascinating_facts": "Japan does not offer visas on arrival. Visa-exempt countries get up to 90 days, while others must apply in advance via authorized centers.",
+    "special_notes": "Strict laws regarding medications—some common cold or ADHD meds are illegal and require advance permission. Zero tolerance for illegal drugs. Do not follow street solicitors in nightlife districts like Kabukicho. Secure travel insurance for emergencies.",
+    "reference_links": ["https://services.digital.go.jp/en/visit-japan-web/"]
+  },
+  {
+    "row_id": "row-29",
+    "fascinating_facts": "An intimate, high-end kappou dining experience in Minami-Otsuka, Tokyo, featuring only 12 seats where guests watch the chef prepare their meals.",
+    "special_notes": "Located near Otsuka Station. Average dinner budget is JPY 3,000–4,000. Reservations are highly recommended due to the small size. Generally accepts credit cards but not QR payments. Do not confuse this with the 24-hour Matsushima izakaya chain.",
+    "reference_links": ["https://tabelog.com/"]
+  },
+  {
+    "row_id": "row-30",
+    "fascinating_facts": "Legendary birthplace of the maneki-neko (beckoning cat) from the 17th century. Home to thousands of white maneki-neko figurines with their right paw raised for good fortune. Features a historic cemetery, three-storied pagoda, and Japanese garden.",
+    "special_notes": "Maintain silence and respectful behavior. Do not write on or vandalize the cat figurines. Taking photos is allowed but do not obstruct others. Bring cash for purchases.",
+    "reference_links": "https://tokyobecky.com, https://livejapan.com, https://japantoday.com"
+  },
+  {
+    "row_id": "row-31",
+    "fascinating_facts": "Perched at 404 meters on Mt. Inazumi, offering a 'floating' torii gate against the sky and sea. Selected as one of the '88 Places in Shikoku'. Features 'Yurugi no Iwa', a large rock that moves when pushed but never topples.",
+    "special_notes": "Sturdy walking or hiking shoes are essential for the steep climb. Weekends/holidays require taking a shuttle bus from Kotohiki Park. Private cars on weekdays face extremely narrow mountain roads.",
+    "reference_links": "Official Kagawa/Kanonji tourism websites"
+  },
+  {
+    "row_id": "row-32",
+    "fascinating_facts": "The real-world location that inspired Lake Itomori in the anime film 'Your Name'. Recognized as one of the 'Top 100 Shinshu Sunset Spots' and 'New Three Great Nightscapes of Japan'. Offers panoramic views of the Suwa basin.",
+    "special_notes": "The parking lot is small and fills up quickly. If hiking from Kamisuwa Station, respect the quiet residential neighborhood. Use GPS for the 30-40 minute steep climb.",
+    "reference_links": "https://japanunfolded.com, https://travelynotes.com, https://trip.com"
+  },
+  {
+    "row_id": "row-33",
+    "fascinating_facts": "Features iconic 80m and 110m wisteria tunnels with 22 varieties of wisteria. Founded by Masao Higuchi after 50 years of work. Selected by CNN as one of the '31 Most Beautiful Places in Japan'.",
+    "special_notes": "Advance timed-entry reservations are mandatory during peak season. Not open year-round (only spring and autumn). No direct public transport; mostly accessible by car or taxi.",
+    "reference_links": "Official Kawachi Wisteria Garden website"
+  },
+  {
+    "row_id": "row-34",
+    "fascinating_facts": "Established in the Taisho era, known as 'Kitchen Town'. Has over 200 shops selling restaurant supplies. Famous for hyper-realistic plastic food replicas (sampuru). The name is linked to the mythological kappa creature.",
+    "special_notes": "Many traditional wholesalers are cash-only. Respect the professional environment as it is a working district. Operating hours vary, mostly closing by 5 PM, and some are closed on weekends.",
+    "reference_links": "Asakusa/Ueno tourism guides"
+  },
+  {
+    "row_id": "row-35",
+    "fascinating_facts": "Known as the 'Temple of Winning Luck' for victory in business, sports, and exams. Thousands of Daruma dolls are scattered around, left by pilgrims whose wishes were fulfilled. Offers a specialized 'Oracle Daruma Mikuji'.",
+    "special_notes": "Wear comfortable walking shoes for mountain terrain. Use public buses or taxis to arrive; walking from nearby areas is dangerous. Bring cash or a pre-loaded IC card.",
+    "reference_links": "Official Katsuoji site"
+  },
+  {
+    "row_id": "row-36",
+    "fascinating_facts": "Located in Expo 2005 Aichi Commemorative Park. Features no large-scale rides, but immersive recreations of famous film settings like 'My Neighbor Totoro' and 'Howl's Moving Castle'.",
+    "special_notes": "Photography and videography are prohibited inside many indoor exhibits. Tickets must be reserved well in advance and entrance times are strictly enforced. Wear comfortable closed-toe walking shoes.",
+    "reference_links": "https://ghibli-park.jp, https://klook.com"
+  },
+  {
+    "row_id": "row-37",
+    "fascinating_facts": "An international, community-focused hostel in Koganei, Tokyo. Hosts Japanese cooking workshops and events. Staff offers multilingual support in over 10 languages.",
+    "special_notes": "The 1F door is locked between 23:00 and 07:00. Remove shoes at the entrance and do not wear indoor slippers onto tatami mats. Avoid loud conversations during quiet hours.",
+    "reference_links": "https://wildcherryblossomhostel.com"
+  },
+  {
+    "row_id": "row-38",
+    "fascinating_facts": "Located in the ShinPuhKan shopping complex in Kyoto, operating under the theme of 'Nature, Craft, Art'. Famous for 'Ice Bouquets'—ice cream cones decorated with edible flower-shaped bean paste.",
+    "special_notes": "It is a standing-only space. In Kyoto, it is bad manners to eat or drink while walking; enjoy your treat within the shop's designated area. Arrive early as treats can sell out.",
+    "reference_links": "https://shinpuhkan.jp, https://trip.com"
+  },
+  {
+    "row_id": "row-39",
+    "fascinating_facts": "Known as the 'Temple of Winning Luck' for victory in business, sports, and exams. Thousands of Daruma dolls are scattered around, left by pilgrims whose wishes were fulfilled. Offers a specialized 'Oracle Daruma Mikuji'.",
+    "special_notes": "Wear comfortable walking shoes for mountain terrain. Use public buses or taxis to arrive; walking from nearby areas is dangerous. Bring cash or a pre-loaded IC card.",
+    "reference_links": "Official Katsuoji site"
+  },
+  {
+    "row_id": "row-40",
+    "fascinating_facts": "Holds the Guinness World Record for the largest permanent architectural projection-mapped display (13,904 sqm). Features rotating artistic works including traditional ukiyo-e and Godzilla/Pokémon. Screenings held year-round every 30 minutes in the evening.",
+    "special_notes": "Avoid using tripods that obstruct the view. There are mandatory bag checks if visiting the observation decks. Screenings are subject to cancellation during inclement weather.",
+    "reference_links": "https://tokyoprojectionmappingproject.jp"
+  },
+  {
+    "row_id": "row-41",
+    "fascinating_facts": "A storybook-themed complex in Kichijoji designed to look like a fairytale village with small doors and a cat café 'Temari no Oshiro' designed like a castle built by cats.",
+    "special_notes": "Do not pick up or force interaction with the cats, and camera flashes are strictly prohibited. The café usually requires an entrance fee and a one-drink minimum.",
+    "reference_links": "https://thegate12.com"
+  },
+  {
+    "row_id": "row-42",
+    "fascinating_facts": "Japan's second-largest offshore island, historically a place of exile for political figures. Famous for its Gold Mines (a UNESCO World Heritage Site) and the reintroduction of the Toki (Crested Ibis) bird.",
+    "special_notes": "Renting a car is the best way to explore due to infrequent public transport. The ferry ride can cause motion sickness.",
+    "reference_links": "https://visitsado.com"
+  },
+  {
+    "row_id": "row-43",
+    "fascinating_facts": "The only shrine in Japan dedicated to hair. Enshrines the historical founder of the hairdressing profession. Visitors can participate in a unique ritual offering a strand of their own hair to a hair mound.",
+    "special_notes": "Very small and quiet shrine, not a bustling tourist spot. Shrine office usually open 9:00 AM to 4:00 PM. Follow Shinto etiquette and walk along the sides of the approach path.",
+    "reference_links": "https://sagano-kanko.co.jp"
+  },
+  {
+    "row_id": "row-44",
+    "fascinating_facts": "A small, local establishment in the Koganecho area of Yokohama, selling traditional Japanese sweets, cakes, and bread. Name is likely derived from traditional konpeito star-shaped candies.",
+    "special_notes": "As a local shop, standard Japanese etiquette applies: be polite and considerate.",
+    "reference_links": "https://tabelog.com"
+  },
+  {
+    "row_id": "row-45",
+    "fascinating_facts": "Holds a Guinness World Record as the world's most visited museum dedicated to a single artist/group. Features 'body-immersive' interactive spaces, including a Floating Flower Garden with over 13,000 live orchids that react to your presence.",
+    "special_notes": "A barefoot experience. Strongly recommended to wear pants that can be rolled up to the knee due to water wading areas, and avoid skirts/dresses due to mirrored floors. Book tickets well in advance.",
+    "reference_links": "https://planets.teamlab.art/tokyo/"
+  },
+  {
+    "row_id": "row-46",
+    "fascinating_facts": "An overpass that creates an optical illusion where its staircase appears to lead directly to the summit of Mount Fuji, offering a rare, unobstructed view of the mountain from base to peak.",
+    "special_notes": "Plagued by overtourism. You must strictly stay on the pedestrian walkway—do not enter the vehicle lanes or median for photos. Respect local residential areas and noise rules.",
+    "reference_links": "https://fujisan.ne.jp/"
+  },
+  {
+    "row_id": "row-47",
+    "fascinating_facts": "Ine is famous for its 230 traditional 'Funaya' (boat houses) with ground-floor boat garages. Amanohashidate is a sandbar with 5,000 pine trees, known as one of Japan's Three Scenic Views, traditionally viewed upside-down through one's legs.",
+    "special_notes": "Ine is a working village; do not trespass onto private Funaya properties. Transport in this northern Kyoto region is infrequent, so verify bus and train schedules in advance.",
+    "reference_links": "https://www.amanohashidate.jp/"
+  },
+  {
+    "row_id": "row-48",
+    "fascinating_facts": "Offers traditional 'Tarai Bune' (tub boat) rides in a picturesque cove connecting two islets. These unique boats were historically developed in the Meiji period for collecting abalone and seaweed.",
+    "special_notes": "Follow the boatman's instructions and remain seated to maintain the boat's balance. Renting a car is recommended to reach this area, as local bus service on Sado Island is limited.",
+    "reference_links": "https://www.visitsado.com/en/"
+  },
+  {
+    "row_id": "row-49",
+    "fascinating_facts": "A historic, retro amusement park opened in 1929 at the summit of Mount Ikoma. Offers panoramic views of the Nara and Osaka plains and features Japan's oldest 'Flying Tower' ride. Entry is free.",
+    "special_notes": "The park is closed during the winter season (early December to mid-March). Wear comfortable, grippy shoes as the mountain paths can be slippery.",
+    "reference_links": "http://www.ikomasanjou.com/"
+  },
+  {
+    "row_id": "row-50",
+    "fascinating_facts": "A 229-meter high observation deck providing 360-degree open-air panoramic views of Tokyo, including the famous Shibuya Scramble Crossing below, and interactive spots like the 'Sky Edge'.",
+    "special_notes": "Strict luggage policy: all bags, food, hats, scarves, and tripods must be stored in 46th-floor lockers. Cameras must have a neck strap or fit in your pocket. Advance online booking is essential.",
+    "reference_links": "https://www.shibuya-scramble-square.com/sky/"
+  },
+  {
+    "row_id": "row-51",
+    "fascinating_facts": "Known as 'Cat Island', free-roaming cats outnumber the human residents here. Cats were initially kept to protect silkworm farms and later revered for good luck. The island even features a Cat Shrine.",
+    "special_notes": "Pet dogs are strictly prohibited to protect the cats. Do not force interactions with the cats and refrain from entering private residential property. Facilities are limited; bring necessary food and cash.",
+    "reference_links": "https://visitmiyagi.com/"
+  },
+  {
+    "row_id": "row-52",
+    "fascinating_facts": "Kyoto is home to numerous hidden, private temples that open only for exclusive viewings or seasonal periods, offering highly meditative and intimate experiences away from the main tourist crowds.",
+    "special_notes": "Absolute quietness and reverence are expected. Shoes must often be removed (wear clean socks), and photography inside the temple buildings is almost always strictly prohibited.",
+    "reference_links": "https://kyoto.travel/en/"
+  },
+  {
+    "row_id": "row-53",
+    "fascinating_facts": "Dating back to 1733, this is one of Tokyo's largest and most historic summer traditions, featuring approximately 20,000 fireworks launched over the Sumida River and drawing nearly a million attendees.",
+    "special_notes": "Expect extreme, shoulder-to-shoulder crowds. For safety reasons, police strictly prohibit standing still on the bridges during the event. Arrive very early and do not use tape to reserve public space.",
+    "reference_links": "https://www.sumidagawa-hanabi.com/"
+  },
+  {
+    "row_id": "row-54",
+    "fascinating_facts": "An 8th-century temple housing 8,000 stone grave markers for departed souls without kin. It features a stunning, serene bamboo grove that is much less crowded than the main Arashiyama grove.",
+    "special_notes": "This is an active, sacred memorial site, not a public park. Maintain silence and deep respect. An entrance fee is required, and access is restricted to temple operating hours.",
+    "reference_links": "http://www.nenbutsuji.jp/"
+  },
+  {
+    "row_id": "row-55",
+    "fascinating_facts": "A historic Shinto shrine standing in striking contrast to the modern office buildings of Akasaka. It serves as a peaceful urban sanctuary characterized by an impressive tunnel of Torii gates.",
+    "special_notes": "Bow slightly before passing through Torii gates and walk on the sides of the path, leaving the center for the deity. Maintain a low voice and avoid eating or drinking on the shrine grounds.",
+    "reference_links": "https://www.hiejinja.net/"
+  },
+  {
+    "row_id": "row-56",
+    "fascinating_facts": "A popular Japanese jewelry brand offering highly accessible crafting experiences, where artisans can hammer a custom-sized ring for you in minutes, or you can join a workshop to forge your own ring.",
+    "special_notes": "Reservations are highly recommended for the hands-on workshops. As these are handmade fashion accessories, they may require care to prevent scratching or tarnishing compared to fine heirloom jewelry.",
+    "reference_links": "https://www.kochentertainment.com/glanta/"
+  },
+  {
+    "row_id": "row-57",
+    "fascinating_facts": "On the Tokaido Shinkansen route, Mount Fuji becomes visible for a brief, spectacular 30 to 60-second window approximately 40-45 minutes after departing Tokyo.",
+    "special_notes": "Book Seat E in standard cars (or Seat D in Green cars) to guarantee a window seat on the mountain side. Visibility is highly dependent on weather; winter months offer the clearest views.",
+    "reference_links": "https://smart-ex.jp/en/"
+  },
+  {
+    "row_id": "row-58",
+    "fascinating_facts": "Kenninji is Kyoto's oldest Zen temple, famous for its dramatic 'Twin Dragons' ceiling mural. Nearby, Yasaka Tower is a striking five-story pagoda and a highly photographed symbol of the Higashiyama district.",
+    "special_notes": "Remove shoes when entering Kenninji's buildings. When photographing Yasaka Tower, do not block the narrow residential streets, hinder traffic, or trespass onto private property.",
+    "reference_links": "https://kyoto.travel/en/"
+  },
+  {
+    "row_id": "row-59",
+    "fascinating_facts": "A mystical, forest-shrouded shrine known for its approach lined with 100 moss-covered stone lanterns and the massive Ugetoiwa rock arch. It famously inspired the setting for the anime 'Hotarubi no Mori e'.",
+    "special_notes": "The approach requires climbing roughly 270 steep stone steps, which can be slippery when wet. Walk on the sides of the path to respect the deities. Check limited local transport schedules carefully.",
+    "reference_links": "https://kumamoto.guide/en/"
+  },
+  {
+    "row_id": "row-0",
+    "fascinating_facts": "Houses roughly 150 antique music boxes and automata, including the world's oldest music box from 1796. Much of the collection was assembled by Guido Reuge, founder of the Swiss luxury music box manufacturer Reuge.",
+    "special_notes": "Visitors can often enjoy live demonstrations. Remember to keep voices low, as it is a quiet space. Do not touch the fragile exhibits, and avoid flash photography during demonstrations.",
+    "reference_links": ["https://www.kyoto.lg.jp", "https://grandwest.kyoto", "https://wanderlog.com"]
+  },
+  {
+    "row_id": "row-1",
+    "fascinating_facts": "Japanese uses a mix of three scripts (Kanji, Hiragana, Katakana) and has a rich vocabulary of onomatopoeic words. The culture emphasizes 'Omotenashi' (hospitality), making polite phrases highly appreciated.",
+    "special_notes": "Key phrases include 'Sumimasen' (Excuse me/Sorry) as a magic word, 'Arigatou gozaimasu' (Thank you), and '[Item] o kudasai' (I would like [item], please). Pair phrases with a polite nod or bow.",
+    "reference_links": ["https://www.japan.travel", "https://www.insidekyoto.com", "https://boutiquejapan.com"]
+  },
+  {
+    "row_id": "row-2",
+    "fascinating_facts": "The Osaka Amazing Pass is now a digital e-Pass providing unlimited subway/bus use and free entry to over 40 attractions. Daikokuya are famous 'kinken' discount ticket shops in Japan, though unlikely to sell the digital-only Amazing Pass.",
+    "special_notes": "The Amazing Pass is valid for calendar days, not rolling 24-hour periods. If buying other tickets at Daikokuya, have your destination written in Japanese as staff speak limited English, and check for holiday blackout dates.",
+    "reference_links": ["https://www.explore.osaka", "https://www.klook.com", "https://www.japan-guide.com"]
+  },
+  {
+    "row_id": "row-3",
+    "fascinating_facts": "Accommodations often open bookings up to 6 months in advance. Business hotels (like Toyoko Inn or Super Hotel) offer compact, highly functional, and affordable stays.",
+    "special_notes": "Book early with free cancellation policies to lock in rates. Always remove shoes at ryokans or designated hotel genkans. Passports must be copied by law at check-in. Tattoos may restrict access to public baths.",
+    "reference_links": ["https://www.thetokyochapter.com", "https://www.japan.travel", "https://www.pickyourtrail.com"]
+  },
+  {
+    "row_id": "row-4",
+    "fascinating_facts": "Magome-juku was the 43rd post station on the historic Nakasendo trail connecting Edo and Kyoto. The steep town has hidden power lines to preserve its Edo-period aesthetic and is the birthplace of novelist Shimazaki Toson.",
+    "special_notes": "Bears are occasionally spotted on the Nakasendo trail to Tsumago, so carrying a bear bell is advised. Magome is built on a steep slope, so wear comfortable shoes. Respect the locals who still live in the village.",
+    "reference_links": ["https://www.japan.travel", "https://nakasendo.gifu.jp", "https://www.japan-guide.com"]
+  },
+  {
+    "row_id": "row-5",
+    "fascinating_facts": "T’s Tantan in Tokyo Station is famous for its vegan ramen. You can also experience traditional Buddhist vegetarian cuisine (Shojin Ryori) or modern spots like Vegan Ramen UZU at teamLab Planets.",
+    "special_notes": "Always watch out for hidden 'dashi' (fish stock) or bonito flakes, even in vegetable dishes. Use the HappyCow app to find verified spots. Simply saying 'I am vegetarian' might not suffice; specify no meat or fish.",
+    "reference_links": ["https://www.happycow.net", "https://www.japan.travel", "https://www.gotokyo.org"]
+  },
+  {
+    "row_id": "row-6",
+    "fascinating_facts": "In Japan, a specific description of what you don't eat is more effective than standard labels like 'vegan'. Shojin ryori (Buddhist temple food) is a traditional plant-based dining experience.",
+    "special_notes": "Useful phrases: 'Watashi wa bejitarian desu' (I am vegetarian), 'Niku to sakana wa tabemasen' (I don't eat meat or fish), and 'Dashi wa tsukatte imasu ka?' (Does this contain fish broth?). Using a translated note on your phone helps greatly.",
+    "reference_links": ["https://www.japan.travel", "https://www.happycow.net"]
+  },
+  {
+    "row_id": "row-7",
+    "fascinating_facts": "Kyoto is massive and historically significant. Traditional Machiya (wooden townhouses) offer unique accommodation experiences. Cherry blossom and autumn foliage seasons draw enormous crowds.",
+    "special_notes": "Do not touch, chase, or photograph geisha/maiko without permission in Gion. Avoid eating while walking. Cash is still widely used in smaller shops. Start your days very early to beat crowds at popular sites.",
+    "reference_links": ["https://www.kyoto.travel", "https://www.lonelyplanet.com", "https://www.japan.travel"]
+  },
+  {
+    "row_id": "row-8",
+    "fascinating_facts": "Located in a century-old machiya, this is the world's first Starbucks with tatami-mat seating and a traditional noren curtain at the entrance. It has a tokonoma (alcove) and a stone basin courtyard.",
+    "special_notes": "Look for modest signage to find the entrance. You must remove your shoes for tatami seating. Due to massive popularity, visit early (around 8:00 AM) and do not occupy seats for extended periods.",
+    "reference_links": ["https://www.starbucks.co.jp", "https://www.japan.travel"]
+  },
+  {
+    "row_id": "row-9",
+    "fascinating_facts": "JAL offers international travelers free domestic flight segments within Japan to encourage exploration beyond the Golden Route (Tokyo-Kyoto-Osaka). These domestic segments inherit the generous international baggage allowance.",
+    "special_notes": "The domestic flights MUST be booked simultaneously with your international flight using the 'Multi-City' tool. Stopover fees may apply if laying over for more than 24 hours. Check eligibility based on your departure country.",
+    "reference_links": ["https://www.jal.co.jp", "https://www.traveltomorrow.com"]
+  },
+  {
+    "row_id": "row-10",
+    "fascinating_facts": "Platinumaps is an interactive digital map platform widely used across Japan for tourism, airports, and events. It offers real-time congestion data, digital stamp rallies, and multi-language support without needing a dedicated app.",
+    "special_notes": "Local tourism boards often use Platinumaps for their 'Free Explorer Guidebooks' or digital pamphlets. Simply access them via a web browser on your phone for easy navigation.",
+    "reference_links": ["https://platinumaps.jp", "https://www.macnica.co.jp", "https://kyoto.travel"]
+  },
+  {
+    "row_id": "row-11",
+    "fascinating_facts": "Located on the Asagiri Plateau, Makaino Farm Resort boasts one of the best unobstructed views of Mount Fuji in Japan. It features the famous 'Heidi’s Swing' for iconic mountain photos.",
+    "special_notes": "Bring cash as many activities and tickets require it. Avoid the roads around the area after 3:00 PM on Sundays/Holidays due to massive traffic congestion. Views of Mt. Fuji are weather-dependent, best in winter.",
+    "reference_links": ["https://www.makaino.com", "https://www.shizuoka-guide.com"]
+  },
+  {
+    "row_id": "row-12",
+    "fascinating_facts": "Founded in 711 AD, it is the head of 30,000 Inari shrines in Japan. It is famous for its 10,000 vermilion torii gates donated by individuals and businesses. Foxes are the messengers of the deity Inari Okami.",
+    "special_notes": "Bow before entering torii gates. Do not eat, drink, smoke, or fly drones on the trail. Avoid going off-path and watch out for wild boars. Bring a flashlight if hiking the mountain trail at night.",
+    "reference_links": ["https://inari.jp", "https://www.japan-guide.com"]
+  },
+  {
+    "row_id": "row-13",
+    "fascinating_facts": "Eki stamps are free collectible rubber stamps found at many train stations, featuring unique local landmarks or mascots. It’s a nostalgic tradition enjoyed by both locals and tourists.",
+    "special_notes": "In large hubs like Shibuya, the stamp is usually hidden inside the JR ticket office (Midori-no-Madoguchi) or near a staffed gate. If you can't find it, ask staff: 'Eki sutampu wa doko desu ka?'",
+    "reference_links": ["https://stamp.funakiya.com", "https://www.japan-guide.com", "https://www.nationalgeographic.com"]
+  },
+  {
+    "row_id": "row-14",
+    "fascinating_facts": "The five lakes (Kawaguchiko, Yamanakako, Saiko, Shojiko, Motosuko) were formed by ancient lava flows damming rivers. Kawaguchiko is the most accessible, while Yamanakako offers a highland resort vibe.",
+    "special_notes": "Mount Fuji is often clouded over by 10:00 AM, so visit early in the morning for clear views. Weather changes rapidly and is cooler than Tokyo. Do not attempt climbing Mt. Fuji outside the official summer season.",
+    "reference_links": ["https://www.japan-guide.com", "https://yamanashi-kankou.jp"]
+  }
+]
+
+with open('backfill_results.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2)
+print("Saved all 73 rows to backfill_results.json")

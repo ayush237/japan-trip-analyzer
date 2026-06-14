@@ -1,0 +1,367 @@
+[
+  {
+    "row_id": "row-0",
+    "spot_name": "Kyoto Orgel-Dō (Music Box Customization)",
+    "location": "Arashiyama, Kyoto"
+  },
+  {
+    "row_id": "row-1",
+    "spot_name": "Essential Japanese Phrases",
+    "location": "Japan (General)"
+  },
+  {
+    "row_id": "row-2",
+    "spot_name": "Osaka Amazing Pass & Daikokuya",
+    "location": "Osaka, Japan"
+  },
+  {
+    "row_id": "row-3",
+    "spot_name": "Hotel Booking Hack",
+    "location": "Japan (General)"
+  },
+  {
+    "row_id": "row-4",
+    "spot_name": "Magome-juku",
+    "location": "Gifu Prefecture, Japan"
+  },
+  {
+    "row_id": "row-5",
+    "spot_name": "Tokyo Vegetarian Hotspots",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "row_id": "row-6",
+    "spot_name": "Vegan & Vegetarian Travel Phrases",
+    "location": "Japan (General)"
+  },
+  {
+    "row_id": "row-7",
+    "spot_name": "Kyoto Trip Planning Tips",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-8",
+    "spot_name": "Starbucks Coffee Kyoto Ninenzaka Yasaka Chaya",
+    "location": "Kyoto, Japan (Higashiyama District)"
+  },
+  {
+    "row_id": "row-9",
+    "spot_name": "Japan Airlines Free Domestic Flights Hack",
+    "location": "Japan (Nationwide)"
+  },
+  {
+    "row_id": "row-10",
+    "spot_name": "Free Explorer Guidebook & Platinumaps",
+    "location": "Japan (Tokyo, Kyoto, Osaka, Nara)"
+  },
+  {
+    "row_id": "row-11",
+    "spot_name": "Makaino Farm",
+    "location": "Shizuoka, Japan (Asagiri Plateau)"
+  },
+  {
+    "row_id": "row-12",
+    "spot_name": "Fushimi Inari Shrine (Mount Inari Trail)",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-13",
+    "spot_name": "Eki Stamps (Station Stamps) at Shibuya Station",
+    "location": "Shibuya Station, Tokyo, Japan"
+  },
+  {
+    "row_id": "row-14",
+    "spot_name": "Fuji Five Lakes (Kawaguchiko, Yamanaka, etc.)",
+    "location": "Yamanashi, Japan"
+  },
+  {
+    "row_id": "row-15",
+    "spot_name": "Budget Travel Tips (India to Japan)",
+    "location": "N/A"
+  },
+  {
+    "row_id": "row-16",
+    "spot_name": "Japan Travel Checklist & Web Form",
+    "location": "Japan"
+  },
+  {
+    "row_id": "row-17",
+    "spot_name": "2025 Cherry Blossom Forecast",
+    "location": "Japan"
+  },
+  {
+    "row_id": "row-18",
+    "spot_name": "NARUTO & BORUTO Shinobi-Zato",
+    "location": "Nijigen no Mori, Awaji Island"
+  },
+  {
+    "row_id": "row-19",
+    "spot_name": "Comprehensive Regional Guides",
+    "location": "Multiple Regions"
+  },
+  {
+    "row_id": "row-20",
+    "spot_name": "Ultimate Kyoto Itinerary",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-21",
+    "spot_name": "Hirobun Nagashi Somen",
+    "location": "Kibune, Kyoto"
+  },
+  {
+    "row_id": "row-22",
+    "spot_name": "Lake Yamanaka (Shiratorihama / Swan Beach)",
+    "location": "Yamanashi, Japan"
+  },
+  {
+    "row_id": "row-23",
+    "spot_name": "Rapunzel's Lantern Festival",
+    "location": "Fantasy Springs, Tokyo DisneySea"
+  },
+  {
+    "row_id": "row-24",
+    "spot_name": "Waka Kimono Rental",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-25",
+    "spot_name": "Kyoto City Exploration",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-26",
+    "spot_name": "Katsuoji Temple",
+    "location": "Minoo, Osaka"
+  },
+  {
+    "row_id": "row-27",
+    "spot_name": "Onyado Nono Kyoto Shichijo",
+    "location": "Shimogyo Ward, Kyoto"
+  },
+  {
+    "row_id": "row-28",
+    "spot_name": "Japan Travel & Visa Tips",
+    "location": "Japan (General)"
+  },
+  {
+    "row_id": "row-29",
+    "spot_name": "Matsushima Izakaya (Kappou Matsushima)",
+    "location": "Minami-Otsuka, Toshima, Tokyo"
+  },
+  {
+    "row_id": "row-30",
+    "spot_name": "Gotokuji Temple (Cat Village)",
+    "location": "Setagaya-ku, Tokyo"
+  },
+  {
+    "row_id": "row-31",
+    "spot_name": "Takaya Shrine (Torii in the Sky)",
+    "location": "Kagawa, Japan"
+  },
+  {
+    "row_id": "row-32",
+    "spot_name": "Tateishi Park",
+    "location": "Suwa, Nagano"
+  },
+  {
+    "row_id": "row-33",
+    "spot_name": "Kawachi Wisteria Garden",
+    "location": "Kitakyushu, Fukuoka"
+  },
+  {
+    "row_id": "row-34",
+    "spot_name": "Kappabashi Street (Kappabashi Dogugai)",
+    "location": "Tokyo (between Ueno and Asakusa)"
+  },
+  {
+    "row_id": "row-35",
+    "spot_name": "Katsuoji Temple",
+    "location": "Osaka, Japan"
+  },
+  {
+    "row_id": "row-36",
+    "spot_name": "Ghibli Park",
+    "location": "Nagakute, Aichi (near Nagoya)"
+  },
+  {
+    "row_id": "row-37",
+    "spot_name": "Wild Cherry Blossom Hostel",
+    "location": "Koganei, Tokyo"
+  },
+  {
+    "row_id": "row-38",
+    "spot_name": "(THISIS)SHIZEN",
+    "location": "ShinPuhKan 1F, Kyoto"
+  },
+  {
+    "row_id": "row-39",
+    "spot_name": "Katsuoji Temple",
+    "location": "Minoh, Osaka"
+  },
+  {
+    "row_id": "row-40",
+    "spot_name": "TOKYO Night & Light",
+    "location": "Tokyo Metropolitan Government Building, Shinjuku"
+  },
+  {
+    "row_id": "row-41",
+    "spot_name": "Kichijoji Petit Mura",
+    "location": "Kichijoji, Tokyo"
+  },
+  {
+    "row_id": "row-42",
+    "spot_name": "Sado Island",
+    "location": "Niigata, Japan"
+  },
+  {
+    "row_id": "row-43",
+    "spot_name": "Mikami Shrine (Gokami-jinja)",
+    "location": "Arashiyama, Kyoto"
+  },
+  {
+    "row_id": "row-44",
+    "spot_name": "Kinpeidou",
+    "location": "Yokohama, Japan"
+  },
+  {
+    "row_id": "row-45",
+    "spot_name": "teamLab Planets TOKYO",
+    "location": "Toyosu, Tokyo"
+  },
+  {
+    "row_id": "row-46",
+    "spot_name": "Fuji Dream Bridge (Yumeno Ohashi)",
+    "location": "Fuji City, Shizuoka"
+  },
+  {
+    "row_id": "row-47",
+    "spot_name": "Ine Fishing Village & Amanohashidate",
+    "location": "Northern Kyoto"
+  },
+  {
+    "row_id": "row-48",
+    "spot_name": "Yajima Kyojima Tarai Bune",
+    "location": "Sado Island, Niigata"
+  },
+  {
+    "row_id": "row-49",
+    "spot_name": "Ikoma Sanjo Amusement Park",
+    "location": "Ikoma, Nara"
+  },
+  {
+    "row_id": "row-50",
+    "spot_name": "Shibuya Sky",
+    "location": "Shibuya, Tokyo"
+  },
+  {
+    "row_id": "row-51",
+    "spot_name": "Tashirojima (Cat Island)",
+    "location": "Ishinomaki, Miyagi"
+  },
+  {
+    "row_id": "row-52",
+    "spot_name": "Private Temples",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-53",
+    "spot_name": "Sumida River Fireworks",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "row_id": "row-54",
+    "spot_name": "Adashino Nenbutsuji Bamboo Grove",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-55",
+    "spot_name": "Hie Shrine",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "row_id": "row-56",
+    "spot_name": "Glanta",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "row_id": "row-57",
+    "spot_name": "Shinkansen Mt. Fuji View (Seats D-E)",
+    "location": "Tokyo to Osaka Route"
+  },
+  {
+    "row_id": "row-58",
+    "spot_name": "Kenninji Temple & Yasaka Tower",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-59",
+    "spot_name": "Kamishikimi Kumanoza Shrine",
+    "location": "Kumamoto, Japan"
+  },
+  {
+    "row_id": "row-60",
+    "spot_name": "Oiwa Shrine",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-61",
+    "spot_name": "Anime Merchandise",
+    "location": "San Jose, California"
+  },
+  {
+    "row_id": "row-62",
+    "spot_name": "Domyo Kumihimo Experience",
+    "location": "Kagurazaka, Tokyo"
+  },
+  {
+    "row_id": "row-63",
+    "spot_name": "LUUP E-Scooters",
+    "location": "Tokyo, Osaka, Kyoto, Yokohama"
+  },
+  {
+    "row_id": "row-64",
+    "spot_name": "Shirakawa-go",
+    "location": "Gifu Prefecture"
+  },
+  {
+    "row_id": "row-65",
+    "spot_name": "Photography Service",
+    "location": "Tokyo / Hokkaido / Nagano"
+  },
+  {
+    "row_id": "row-66",
+    "spot_name": "Switzerland Video",
+    "location": "Switzerland"
+  },
+  {
+    "row_id": "row-67",
+    "spot_name": "Nittele Tower Miyazaki Clock",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "row_id": "row-68",
+    "spot_name": "Japan Food Bucket List Spots",
+    "location": "Japan (Various)"
+  },
+  {
+    "row_id": "row-69",
+    "spot_name": "Sagan Kyoto",
+    "location": "Kyoto, Japan"
+  },
+  {
+    "row_id": "row-70",
+    "spot_name": "Goshuin (Sacred Seals)",
+    "location": "Shrines/Temples, Japan"
+  },
+  {
+    "row_id": "row-71",
+    "spot_name": "Tobishima Yoi no Akari",
+    "location": "Tobishima Village, Aichi"
+  },
+  {
+    "row_id": "row-72",
+    "spot_name": "Hiroshima to Kyoto Route",
+    "location": "Hiroshima / Kyoto"
+  }
+]

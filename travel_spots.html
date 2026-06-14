@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Japan Hidden Gems</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@500;700&amp;display=swap" rel="stylesheet"/><style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #2c3e50;
+        background: url('https://images.pexels.com/photos/31658696/pexels-photo-31658696.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: -1;
+    }
+
+    .table-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .header {
+        background: linear-gradient(135deg, rgba(26,34,71,0.95) 0%, rgba(43,59,108,0.95) 100%);
+        color: #ffffff;
+        padding: 24px;
+        font-size: 2rem;
+        font-family: 'Shippori Mincho', serif;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        border-bottom: 2px solid rgba(255, 183, 197, 0.5);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    th {
+        background-color: rgba(248, 249, 250, 0.6);
+        color: #1A2247;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    td {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        vertical-align: top;
+    }
+
+    a {
+        color: #d84361;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #1A2247;
+        text-decoration: underline;
+    }
+
+    /* Glassmorphism Rows & Hover Animations */
+    .main-row {
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        background: transparent;
+        opacity: 0; /* For scroll reveal */
+        transform: translateY(20px);
+    }
+
+    .main-row.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .main-row:hover {
+        background: rgba(255, 183, 197, 0.25) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 183, 197, 0.4);
+    }
+
+    .details-row {
+        background-color: transparent;
+    }
+
+    .details-row.hidden {
+        display: none;
+    }
+
+    .expanded-card {
+        padding: 20px;
+        margin: 12px 16px;
+        background: rgba(255, 255, 255, 0.95);
+        border-left: 6px solid #d84361;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .expanded-card h4 {
+        margin-top: 0;
+        color: #1A2247;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        font-family: 'Shippori Mincho', serif;
+    }
+
+    .expanded-card p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    /* Mobile Responsive Cards */
+    @media (max-width: 768px) {
+        body { padding: 10px; }
+        .table-container { background: transparent; box-shadow: none; border: none; backdrop-filter: none; }
+        .header { border-radius: 16px; margin-bottom: 15px; }
+        table, thead, tbody, th, td, tr { display: block; }
+        thead tr { display: none; }
+        .main-row {
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 5px;
+            border: 1px solid rgba(255,183,197,0.3);
+        }
+        td {
+            border: none;
+            padding: 8px 15px;
+            position: relative;
+        }
+        td::before {
+            content: attr(data-label);
+            font-weight: 700;
+            color: #d84361;
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+        .expanded-card { margin: 0 0 15px 0; }
+    }
+
+    /* Sakura Canvas */
+    #sakura-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+    }
+    </style></head>
+<body>
+<div class="table-container">
+<div class="header">
+        Bonus Offbeat Spots &amp; Alternatives
+    </div>
+<table>
+<thead>
+<tr>
+<th>Spot Name</th>
+<th>Location</th>
+<th>Description</th>
+<th>Booking &amp; Access</th>
+<th>Distance / Transit</th>
+<th>Timing / Hours</th>
+<th>Highlights &amp; Romantic Features</th>
+<th>Original Reel Link</th>
+</tr>
+</thead>
+<tbody><tr class="main-row" onclick="toggleDetails('row-0')">
+<td data-label="Spot Name"><strong>Kyoto Orgel-Dō (Music Box Customization)</strong></td>
+<td data-label="Location">Arashiyama, Kyoto</td>
+<td data-label="Description">An enchanting specialty shop where you can craft your own personalized music box. This is a highly memorable, hands-on keepsake experience perfect for couples looking for a romantic, care-focused memory over standard souvenirs.</td>
+<td data-label="Booking &amp; Access"><strong>Walk-ins welcome</strong>; no advance booking required. DIY pricing varies based on the chosen base and charms (typically ~¥3,000 to ¥6,000+). Located at 1-38 Saga-Tenryuji Tateishi-cho.</td>
+<td data-label="Distance / Transit">~5-7 minute walk from Keifuku (Randen) Arashiyama Station, or 5 minute walk from JR Saga-Arashiyama Station.</td>
+<td data-label="Timing / Hours">10:00 AM – 5:00 PM. Plan for an additional 30-45 minutes after crafting for the glue to dry.</td>
+<td data-label="Highlights &amp; Romantic Features">
+<ul class="highlights-list">
+<li>Intimate crafting experience ideal for couples</li>
+<li>Extensive song choices including Studio Ghibli and Anime</li>
+<li>Creates a beautiful, personalized keepsake</li>
+<li>Serene Arashiyama location near scenic riverside walks</li>
+</ul>
+</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DCZQ82VRssc/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-0"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Houses roughly 150 antique music boxes and automata, including the world's oldest music box from 1796. Much of the collection was assembled by Guido Reuge, founder of the Swiss luxury music box manufacturer Reuge.</p><p><strong>Special Notes: </strong>Visitors can often enjoy live demonstrations. Remember to keep voices low, as it is a quiet space. Do not touch the fragile exhibits, and avoid flash photography during demonstrations.</p><p><strong>Reference Links: </strong><a href="https://www.kyoto.lg.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-1')">
+<td data-label="Spot Name">Essential Japanese Phrases</td>
+<td data-label="Location">Japan (General)</td>
+<td data-label="Description">Knowing a few basic Japanese words can significantly enhance your travel experience. While not a physical location, these phrases are key to navigating Japan smoothly.</td>
+<td data-label="Booking &amp; Access">N/A</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Connect better with locals, show respect for the culture, and make dining or navigating much easier.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C-kjdnmyRvj/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-1"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japanese uses a mix of three scripts (Kanji, Hiragana, Katakana) and has a rich vocabulary of onomatopoeic words. The culture emphasizes 'Omotenashi' (hospitality), making polite phrases highly appreciated.</p><p><strong>Special Notes: </strong>Key phrases include 'Sumimasen' (Excuse me/Sorry) as a magic word, 'Arigatou gozaimasu' (Thank you), and '[Item] o kudasai' (I would like [item], please). Pair phrases with a polite nod or bow.</p><p><strong>Reference Links: </strong><a href="https://www.japan.travel" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-2')">
+<td data-label="Spot Name">Osaka Amazing Pass &amp; Daikokuya</td>
+<td data-label="Location">Osaka, Japan</td>
+<td data-label="Description">The Osaka Amazing Pass offers unlimited train/bus travel and free entry to over 40 attractions. Daikokuya is a popular spot for secondhand luxury goods.</td>
+<td data-label="Booking &amp; Access">Purchase the Osaka Amazing Pass online or at major stations. Daikokuya has multiple locations across Osaka (Namba, Shinsaibashi).</td>
+<td data-label="Distance / Transit">Pass covers Osaka Metro lines (fares usually ¥190-¥390). Using local trains instead of Shinkansen for short distances saves money.</td>
+<td data-label="Timing / Hours">Daikokuya stores typically open 11:00 AM - 7:30 PM.</td>
+<td data-label="Highlights &amp; Romantic Features">Great for budget-savvy couples looking to explore Osaka efficiently and find luxury deals.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DB3WkE8SIkc/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-2"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The Osaka Amazing Pass is now a digital e-Pass providing unlimited subway/bus use and free entry to over 40 attractions. Daikokuya are famous 'kinken' discount ticket shops in Japan, though unlikely to sell the digital-only Amazing Pass.</p><p><strong>Special Notes: </strong>The Amazing Pass is valid for calendar days, not rolling 24-hour periods. If buying other tickets at Daikokuya, have your destination written in Japanese as staff speak limited English, and check for holiday blackout dates.</p><p><strong>Reference Links: </strong><a href="https://www.explore.osaka" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-3')">
+<td data-label="Spot Name">Hotel Booking Hack</td>
+<td data-label="Location">Japan (General)</td>
+<td data-label="Description">A travel tip suggesting booking through specific websites to avoid hidden fees and save up to half on hotel rates in Japan.</td>
+<td data-label="Booking &amp; Access">Applicable for booking hotels across Japan.</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Save money on accommodation to spend more on romantic dinners or premium experiences.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DA5V5mayzpt/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-3"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Accommodations often open bookings up to 6 months in advance. Business hotels (like Toyoko Inn or Super Hotel) offer compact, highly functional, and affordable stays.</p><p><strong>Special Notes: </strong>Book early with free cancellation policies to lock in rates. Always remove shoes at ryokans or designated hotel genkans. Passports must be copied by law at check-in. Tattoos may restrict access to public baths.</p><p><strong>Reference Links: </strong><a href="https://www.thetokyochapter.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-4')">
+<td data-label="Spot Name">Magome-juku</td>
+<td data-label="Location">Gifu Prefecture, Japan</td>
+<td data-label="Description">A beautifully preserved historic post town on the ancient Nakasendo trail. Walking the path from Magome to Tsumago offers a magical, step-back-in-time experience.</td>
+<td data-label="Booking &amp; Access">Free to enter. Luggage forwarding to Tsumago available for ¥1,000/item (until Nov 30).</td>
+<td data-label="Distance / Transit">Take JR Shinano/Rapid to Nakatsugawa Station (approx 1h-1h15m from Nagoya), then a 25-30 min Kitaena Kotsu bus to Magome.</td>
+<td data-label="Timing / Hours">Open 24/7, but most shops close around 4:00 PM and last buses run between 5:00-6:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features">The magical sunset views walking down the village and the crisp November air (10-18°C) make for an unforgettable, romantic autumn stroll.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DFVfKPtITx5/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-4"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Magome-juku was the 43rd post station on the historic Nakasendo trail connecting Edo and Kyoto. The steep town has hidden power lines to preserve its Edo-period aesthetic and is the birthplace of novelist Shimazaki Toson.</p><p><strong>Special Notes: </strong>Bears are occasionally spotted on the Nakasendo trail to Tsumago, so carrying a bear bell is advised. Magome is built on a steep slope, so wear comfortable shoes. Respect the locals who still live in the village.</p><p><strong>Reference Links: </strong><a href="https://www.japan.travel" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-5')">
+<td data-label="Spot Name">Tokyo Vegetarian Hotspots</td>
+<td data-label="Location">Tokyo, Japan</td>
+<td data-label="Description">A collection of must-try plant-based dining spots in Tokyo: CoCo Ichibanya for curry (approx ¥800-¥1,000), T's Tantan for vegan ramen (~¥1,100), and Ume no Hana for traditional tofu/yuba kaiseki (¥5,000-¥9,000).</td>
+<td data-label="Booking &amp; Access">Ume no Hana highly recommends reservations. CoCo Ichibanya and T's Tantan accept walk-ins.</td>
+<td data-label="Distance / Transit">T's Tantan is located inside Tokyo and Ikebukuro stations. Easy access via JR Yamanote line using Suica/Pasmo.</td>
+<td data-label="Timing / Hours">Varies by restaurant. Ume no Hana offers elegant multi-course meals suitable for evening dining.</td>
+<td data-label="Highlights &amp; Romantic Features">Ume no Hana provides an elegant, fine-dining kaiseki experience perfect for a romantic date night in Ginza.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DDPNjY5SzUK/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-5"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>T’s Tantan in Tokyo Station is famous for its vegan ramen. You can also experience traditional Buddhist vegetarian cuisine (Shojin Ryori) or modern spots like Vegan Ramen UZU at teamLab Planets.</p><p><strong>Special Notes: </strong>Always watch out for hidden 'dashi' (fish stock) or bonito flakes, even in vegetable dishes. Use the HappyCow app to find verified spots. Simply saying 'I am vegetarian' might not suffice; specify no meat or fish.</p><p><strong>Reference Links: </strong><a href="https://www.happycow.net" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-6')">
+<td data-label="Spot Name">Vegan &amp; Vegetarian Travel Phrases</td>
+<td data-label="Location">Japan (General)</td>
+<td data-label="Description">Crucial phrases for communicating dietary restrictions in Japan, such as "Watashi wa bejitarian desu" (I am vegetarian).</td>
+<td data-label="Booking &amp; Access">N/A</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Ensures stress-free dining experiences, allowing couples to focus on enjoying the food and ambiance.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C-NpBnnS2h7/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-6"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>In Japan, a specific description of what you don't eat is more effective than standard labels like 'vegan'. Shojin ryori (Buddhist temple food) is a traditional plant-based dining experience.</p><p><strong>Special Notes: </strong>Useful phrases: 'Watashi wa bejitarian desu' (I am vegetarian), 'Niku to sakana wa tabemasen' (I don't eat meat or fish), and 'Dashi wa tsukatte imasu ka?' (Does this contain fish broth?). Using a translated note on your phone helps greatly.</p><p><strong>Reference Links: </strong><a href="https://www.japan.travel" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-7')">
+<td data-label="Spot Name">Kyoto Trip Planning Tips</td>
+<td data-label="Location">Kyoto, Japan</td>
+<td data-label="Description">Essential advice and travel guides to help you plan the perfect itinerary in Kyoto and avoid common tourist mistakes.</td>
+<td data-label="Booking &amp; Access">General tips applicable to Kyoto sightseeing.</td>
+<td data-label="Distance / Transit">Kyoto is easily accessible via the Shinkansen from Tokyo or local trains from Osaka.</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Proper planning helps couples discover hidden gems and avoid crowded spots for a more intimate Kyoto experience.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DBuRdQGNaAU/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-7"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Kyoto is massive and historically significant. Traditional Machiya (wooden townhouses) offer unique accommodation experiences. Cherry blossom and autumn foliage seasons draw enormous crowds.</p><p><strong>Special Notes: </strong>Do not touch, chase, or photograph geisha/maiko without permission in Gion. Avoid eating while walking. Cash is still widely used in smaller shops. Start your days very early to beat crowds at popular sites.</p><p><strong>Reference Links: </strong><a href="https://www.kyoto.travel" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-8')">
+<td data-label="Spot Name"><strong>Starbucks Coffee Kyoto Ninenzaka Yasaka Chaya</strong></td>
+<td data-label="Location">Kyoto, Japan (Higashiyama District)</td>
+<td data-label="Description">A unique Starbucks concept store housed in a stunning 100-year-old sukiya-zukuri-style traditional Japanese residence from the Taisho Era.</td>
+<td data-label="Booking &amp; Access">Standard menu pricing (~500–1,000 JPY). No entry fee.</td>
+<td data-label="Distance / Transit">5–10 mins walk from Kiyomizu-michi bus stop (City Bus #206/#100 from Kyoto Station) or 15–20 mins from Gion-Shijo Station.</td>
+<td data-label="Timing / Hours">8:00 AM – 8:00 PM. Best to arrive early right at opening to secure a spot.</td>
+<td data-label="Highlights &amp; Romantic Features">The world's first Starbucks with tatami mat seating. You take off your shoes and relax on cozy cushions in a serene, historic ambiance—perfect for a quiet morning date.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DDHh-K1P-aR/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-8"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Located in a century-old machiya, this is the world's first Starbucks with tatami-mat seating and a traditional noren curtain at the entrance. It has a tokonoma (alcove) and a stone basin courtyard.</p><p><strong>Special Notes: </strong>Look for modest signage to find the entrance. You must remove your shoes for tatami seating. Due to massive popularity, visit early (around 8:00 AM) and do not occupy seats for extended periods.</p><p><strong>Reference Links: </strong><a href="https://www.starbucks.co.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-9')">
+<td data-label="Spot Name"><strong>Japan Airlines Free Domestic Flights Hack</strong></td>
+<td data-label="Location">Japan (Nationwide)</td>
+<td data-label="Description">A special travel promotion where Japan Airlines (JAL) offers complimentary domestic flights for international travelers to explore beyond major cities.</td>
+<td data-label="Booking &amp; Access">Free (¥0) domestic flight if booked simultaneously with an international round-trip via JAL. (A $100 stopover fee may apply).</td>
+<td data-label="Distance / Transit">Valid for flights from major hubs (like Tokyo or Osaka) to regional domestic airports.</td>
+<td data-label="Timing / Hours">Dependent on your selected flight schedules.</td>
+<td data-label="Highlights &amp; Romantic Features">Allows you to easily add a second, offbeat destination to your itinerary (like Hokkaido or Wakayama) without extra travel costs, extending your romantic getaway.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DE41DD2tY_D/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-9"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>JAL offers international travelers free domestic flight segments within Japan to encourage exploration beyond the Golden Route (Tokyo-Kyoto-Osaka). These domestic segments inherit the generous international baggage allowance.</p><p><strong>Special Notes: </strong>The domestic flights MUST be booked simultaneously with your international flight using the 'Multi-City' tool. Stopover fees may apply if laying over for more than 24 hours. Check eligibility based on your departure country.</p><p><strong>Reference Links: </strong><a href="https://www.jal.co.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-10')">
+<td data-label="Spot Name"><strong>Free Explorer Guidebook &amp; Platinumaps</strong></td>
+<td data-label="Location">Japan (Tokyo, Kyoto, Osaka, Nara)</td>
+<td data-label="Description">A highly useful free physical guidebook and online interactive map (Platinumaps) for planning itineraries and finding local discounts across major Japanese cities.</td>
+<td data-label="Booking &amp; Access">100% Free. Includes discount vouchers (e.g., ¥500 off at BOOKOFF).</td>
+<td data-label="Distance / Transit">Physical guidebooks can be found at local tourist centers in Osaka; map accessible online anywhere.</td>
+<td data-label="Timing / Hours">24/7 online access.</td>
+<td data-label="Highlights &amp; Romantic Features">A great way to collaboratively plan your trip and hunt for local discounts, turning itinerary building into a fun activity before and during your vacation.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C92GizeSF4V/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-10"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Platinumaps is an interactive digital map platform widely used across Japan for tourism, airports, and events. It offers real-time congestion data, digital stamp rallies, and multi-language support without needing a dedicated app.</p><p><strong>Special Notes: </strong>Local tourism boards often use Platinumaps for their 'Free Explorer Guidebooks' or digital pamphlets. Simply access them via a web browser on your phone for easy navigation.</p><p><strong>Reference Links: </strong><a href="https://platinumaps.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-11')">
+<td data-label="Spot Name"><strong>Makaino Farm</strong></td>
+<td data-label="Location">Shizuoka, Japan (Asagiri Plateau)</td>
+<td data-label="Description">A scenic farm resort situated on the Asagiri Plateau offering interactives with farm animals and incredible views of Mt. Fuji.</td>
+<td data-label="Booking &amp; Access">1,200 JPY entrance fee for adults in November. Cash preferred. Closed on Wednesdays and Thursdays.</td>
+<td data-label="Distance / Transit">~30-40 mins by bus from JR Fujinomiya Station or ~60 mins from Shin-Fuji Station to the Makaino Bokujo stop. Free parking available.</td>
+<td data-label="Timing / Hours">Typically 9:30 AM to 4:30 PM (varies slightly by season).</td>
+<td data-label="Highlights &amp; Romantic Features">Famous for the "Mt. Fuji Swing" where you can take breathtaking photos seemingly swinging into Mt. Fuji. A very romantic, playful spot with gorgeous autumn views.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DE9icpnyUZZ/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-11"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Located on the Asagiri Plateau, Makaino Farm Resort boasts one of the best unobstructed views of Mount Fuji in Japan. It features the famous 'Heidi’s Swing' for iconic mountain photos.</p><p><strong>Special Notes: </strong>Bring cash as many activities and tickets require it. Avoid the roads around the area after 3:00 PM on Sundays/Holidays due to massive traffic congestion. Views of Mt. Fuji are weather-dependent, best in winter.</p><p><strong>Reference Links: </strong><a href="https://www.makaino.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-12')">
+<td data-label="Spot Name"><strong>Fushimi Inari Shrine (Mount Inari Trail)</strong></td>
+<td data-label="Location">Kyoto, Japan</td>
+<td data-label="Description">Kyoto's iconic shrine famous for its thousands of vermilion torii gates. Hiking beyond the crowded lower sections reveals serene forest paths.</td>
+<td data-label="Booking &amp; Access">Free (¥0). No entrance fee required.</td>
+<td data-label="Distance / Transit">3-5 mins walk from JR Inari Station (Nara Line) or Fushimi-Inari Station (Keihan Line).</td>
+<td data-label="Timing / Hours">Open 24/7. Best visited early morning or later in the evening to avoid crowds.</td>
+<td data-label="Highlights &amp; Romantic Features">A full loop takes about 2-3 hours. Walking the quieter, higher trails away from the crowds offers a deeply peaceful, spiritual, and romantic hike with stunning city views.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DA0dXqOSH0-/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-12"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Founded in 711 AD, it is the head of 30,000 Inari shrines in Japan. It is famous for its 10,000 vermilion torii gates donated by individuals and businesses. Foxes are the messengers of the deity Inari Okami.</p><p><strong>Special Notes: </strong>Bow before entering torii gates. Do not eat, drink, smoke, or fly drones on the trail. Avoid going off-path and watch out for wild boars. Bring a flashlight if hiking the mountain trail at night.</p><p><strong>Reference Links: </strong><a href="https://inari.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-13')">
+<td data-label="Spot Name"><strong>Eki Stamps (Station Stamps) at Shibuya Station</strong></td>
+<td data-label="Location">Shibuya Station, Tokyo, Japan</td>
+<td data-label="Description">Beautifully detailed, unique rubber stamps found at train stations across Japan showcasing local landmarks and cultural motifs.</td>
+<td data-label="Booking &amp; Access">Free to use (¥0). Bring your own notebook or buy a dedicated stamp book for ~500-1,000 JPY.</td>
+<td data-label="Distance / Transit">Located inside or near the ticket gates or station master's office of Shibuya Station (and most JR stations).</td>
+<td data-label="Timing / Hours">Available during station operating hours (typically 5:00 AM to midnight).</td>
+<td data-label="Highlights &amp; Romantic Features">Turns daily transit into a fun, creative treasure hunt. Collecting these stamps in a shared notebook makes for a wonderful, personalized souvenir of your journey.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DCgLaI0tiy5/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-13"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Eki stamps are free collectible rubber stamps found at many train stations, featuring unique local landmarks or mascots. It’s a nostalgic tradition enjoyed by both locals and tourists.</p><p><strong>Special Notes: </strong>In large hubs like Shibuya, the stamp is usually hidden inside the JR ticket office (Midori-no-Madoguchi) or near a staffed gate. If you can't find it, ask staff: 'Eki sutampu wa doko desu ka?'</p><p><strong>Reference Links: </strong><a href="https://stamp.funakiya.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-14')">
+<td data-label="Spot Name"><strong>Fuji Five Lakes (Kawaguchiko, Yamanaka, etc.)</strong></td>
+<td data-label="Location">Yamanashi, Japan</td>
+<td data-label="Description">A stunning region of five lakes at the northern base of Mount Fuji, offering spectacular views of the mountain and vibrant autumn foliage.</td>
+<td data-label="Booking &amp; Access">Sightseeing bus passes available (e.g., 2-Day Kawaguchiko/Saiko/Motosuko Area Pass for 2,000 JPY).</td>
+<td data-label="Distance / Transit">~2 hours by direct highway bus or Fuji Excursion train from Tokyo to Kawaguchiko Station.</td>
+<td data-label="Timing / Hours">Lake views are accessible 24/7; buses run from morning to early evening.</td>
+<td data-label="Highlights &amp; Romantic Features">Varies from bustling Kawaguchi to serene Motosu. Lake Yamanaka is highly recommended for picturesque moments with swans and an unobstructed, breathtaking backdrop of Fuji.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DC_qsKCv_tG/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-14"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The five lakes (Kawaguchiko, Yamanakako, Saiko, Shojiko, Motosuko) were formed by ancient lava flows damming rivers. Kawaguchiko is the most accessible, while Yamanakako offers a highland resort vibe.</p><p><strong>Special Notes: </strong>Mount Fuji is often clouded over by 10:00 AM, so visit early in the morning for clear views. Weather changes rapidly and is cooler than Tokyo. Do not attempt climbing Mt. Fuji outside the official summer season.</p><p><strong>Reference Links: </strong><a href="https://www.japan-guide.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-15')">
+<td data-label="Spot Name">Budget Travel Tips (India to Japan)</td>
+<td data-label="Location">N/A</td>
+<td data-label="Description">Tips for planning a budget-friendly 10-day trip to Japan from India under INR 1.3 lac, including visa processing via VFS.</td>
+<td data-label="Booking &amp; Access">Visas can be managed via agents like Travel Visa Global.</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">October to December (fall) and March to May (cherry blossoms) are highly recommended times for a trip.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DDjC_ctPLNe/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-15"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japan has over 5 million vending machines, extremely punctual trains, zero-tolerance for littering, and slurping noodles is considered a compliment.</p><p><strong>Special Notes: </strong>Use rechargeable IC cards instead of JR Pass (often cheaper), stay in capsule hotels, eat at konbini or local shokudo for budget meals. Etiquette: No tipping, remove shoes indoors, bow when greeting, avoid sticking chopsticks upright in rice. Be aware that vegetarian options can be hard to find due to dashi (fish stock).</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-16')">
+<td data-label="Spot Name">Japan Travel Checklist &amp; Web Form</td>
+<td data-label="Location">Japan</td>
+<td data-label="Description">Essential pre-travel checklist for Japan, emphasizing the Visit Japan Web form for smooth immigration.</td>
+<td data-label="Booking &amp; Access">Fill Visit Japan Web form online (free). Book attraction tickets in advance. JR Pass must be bought before arrival.</td>
+<td data-label="Distance / Transit">Use any 7-11 ATM for cash withdrawals.</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Ensuring these essentials are sorted guarantees a stress-free start to exploring Japan's incredible sights.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C_7xiwNyVE0/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-16"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Visit Japan Web is the official free online service by the Japanese government to streamline immigration and customs, replacing paper forms with unified QR codes.</p><p><strong>Special Notes: </strong>Take screenshots of your QR codes in case of airport connectivity issues. Each traveler, even in a family, needs their own unique QR code. Register 3-14 days before departure. Paper forms can still be used if needed.</p><p><strong>Reference Links: </strong><a href="https://www.vjw.digital.go.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-17')">
+<td data-label="Spot Name">2025 Cherry Blossom Forecast</td>
+<td data-label="Location">Japan</td>
+<td data-label="Description">The Japan Meteorological Corporation's early forecast for the 2025 sakura (cherry blossom) season across major Japanese cities.</td>
+<td data-label="Booking &amp; Access">N/A</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">Blooms start late March (e.g., Tokyo around Mar 24, full bloom Mar 31) and continue through early May in Sapporo.</td>
+<td data-label="Highlights &amp; Romantic Features">Planning your trip around these dates offers a magical, deeply romantic atmosphere under the sakura canopies.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DEmi7azyjW4/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-17"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The 'sakura front' moves from west to east and finally north. The beautiful peak of Somei Yoshino cherry blossoms only lasts 10 to 14 days. The Japan Weather Association monitors over 80 locations for exact forecasting.</p><p><strong>Special Notes: </strong>In 2025, blooms began late March in Tokyo/Kyoto. For earlier blooms, look for Kawazu-zakura in February. Always take your trash with you after hanami (flower viewing) picnics. Visit early in the morning to beat the heavy crowds. Follow local rules on tarps and fires.</p><p><strong>Reference Links: </strong><a href="https://jwa.or.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-18')">
+<td data-label="Spot Name">NARUTO &amp; BORUTO Shinobi-Zato</td>
+<td data-label="Location">Nijigen no Mori, Awaji Island</td>
+<td data-label="Description">An immersive anime theme park featuring life-sized sets, Hokage Rock, and interactive ninja quests from Naruto and Boruto.</td>
+<td data-label="Booking &amp; Access">Advance tickets recommended. Light Ticket for November: ~3,400–4,500 JPY (Adults). Premium packages can reach ~20,500 JPY.</td>
+<td data-label="Distance / Transit">Take a direct highway bus from Osaka (JR Namba/Osaka Station) or Kobe to Awaji Interchange, then use the free park shuttle.</td>
+<td data-label="Timing / Hours">Park is generally open 10:00 - 20:00.</td>
+<td data-label="Highlights &amp; Romantic Features">A thrilling offbeat spot for anime fans to dive into the Hidden Leaf Village and take iconic photos by the statues.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C9w-ihvyZNL/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-18"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Located in Nijigen no Mori on Awaji Island, this park brings the Hidden Leaf Village to life with a massive Hokage Rock, life-sized statues, an Ichiraku Ramen shop, and AR scavenger hunts.</p><p><strong>Special Notes: </strong>Visitors receive 'ninja scrolls' to complete missions like the Ten no Maki maze. Comfortable shoes are a must. Not recommended for pregnant women or those with mobility issues due to steep slopes. Wheelchairs and strollers are not permitted inside the attraction.</p><p><strong>Reference Links: </strong><a href="https://nijigennomori.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-19')">
+<td data-label="Spot Name">Comprehensive Regional Guides</td>
+<td data-label="Location">Multiple Regions</td>
+<td data-label="Description">A collection of curated guides covering Kyoto for first-timers, Nara, Kansai secrets, Nagano, and best Tokyo day trips.</td>
+<td data-label="Booking &amp; Access">N/A</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">N/A</td>
+<td data-label="Highlights &amp; Romantic Features">Excellent resource for planning a well-rounded itinerary, from rural villages to tattoo-friendly onsen towns.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C--LAhgPgB-/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-19"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japan is deeply rooted in respect and social harmony (omotenashi and meiwaku). The country is incredibly diverse geographically, from snowy Hokkaido to tropical Okinawa.</p><p><strong>Special Notes: </strong>Japan is still largely cash-based outside major cities. Rent a pocket Wi-Fi. Do not tip, eat while walking, or leave trash on streets. Tattoos are mostly forbidden in traditional onsens unless covered. Familiarize yourself with earthquake evacuation procedures.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-20')">
+<td data-label="Spot Name">Ultimate Kyoto Itinerary</td>
+<td data-label="Location">Kyoto, Japan</td>
+<td data-label="Description">A highly structured neighborhood-by-neighborhood guide to Kyoto to minimize transit time, featuring Fushimi Inari, Gion, and Arashiyama.</td>
+<td data-label="Booking &amp; Access">N/A</td>
+<td data-label="Distance / Transit">Detailed routing: e.g., 15 mins by train to Fushimi Inari from Kyoto Station; 20 min walk to Pontocho Alley from Gion.</td>
+<td data-label="Timing / Hours">Best to split into 2-3 days. Gion is magical in the early evening.</td>
+<td data-label="Highlights &amp; Romantic Features">Sannenzaka and Nenenzaka offer incredibly romantic, cobbled streets lined with traditional tea houses and stunning sunset views of Yasaka Pagoda.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DEcJYVuPNFe/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-20"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Kyoto served as Japan's imperial capital for over 1,000 years, holding numerous UNESCO World Heritage sites, traditional tea houses, and the iconic Arashiyama Bamboo Grove.</p><p><strong>Special Notes: </strong>Arrive early (before 8 AM) at popular spots to avoid huge crowds. Respect the Geisha culture—do not touch, follow, or photograph Geiko or Maiko in Gion. Do not bring large luggage on city buses; use delivery services instead. Stay off private property.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-21')">
+<td data-label="Spot Name">Hirobun Nagashi Somen</td>
+<td data-label="Location">Kibune, Kyoto</td>
+<td data-label="Description">A unique and fun dining experience where you catch flowing somen noodles (Nagashi Somen) zooming down bamboo flumes over a river.</td>
+<td data-label="Booking &amp; Access">Typically 2,000 JPY (cash only). <strong>Note:</strong> Nagashi Somen is a summer-only activity (May-Sept) and is NOT available in November. Traditional Kaiseki meals are available year-round.</td>
+<td data-label="Distance / Transit">Train from central Kyoto to Demachiyanagi Station, transfer to Eizan line to Kibuneguchi Station, then local bus #33 and a short walk.</td>
+<td data-label="Timing / Hours">May-September: 11:00 - 16:00 (for somen). Expect long waits.</td>
+<td data-label="Highlights &amp; Romantic Features">Dining on a platform over the Kibune river provides a serene, cooling, and uniquely Japanese cultural experience.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DBJw5GBsFyb/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-21"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A traditional summer dining experience in Kibune where diners catch chilled noodles sliding down a bamboo flume with chopsticks. The kawadoko platforms are built right over the Kibune River, naturally cooling the area.</p><p><strong>Special Notes: </strong>Runs early May to late September. Arrive well before 11:00 AM as they do not take advance reservations and lines can take hours. Payment is usually cash only. Often canceled if it rains or if the river floods. The meal itself is fast-paced (about 20 minutes).</p><p><strong>Reference Links: </strong><a href="https://trip.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-22')">
+<td data-label="Spot Name">Lake Yamanaka (Shiratorihama / Swan Beach)</td>
+<td data-label="Location">Yamanashi, Japan</td>
+<td data-label="Description">A serene spot on Lake Yamanaka offering a picturesque view of Mount Fuji, complete with elegant swans that make it look straight out of a Disney movie.</td>
+<td data-label="Booking &amp; Access">Free to visit. No booking required.</td>
+<td data-label="Distance / Transit">Direct highway bus from Tokyo (Shinjuku or Tokyo Station) takes ~2.5 hours. One-way fare is approx. ¥2,300 to ¥2,700 in November.</td>
+<td data-label="Timing / Hours">Open 24 hours.</td>
+<td data-label="Highlights &amp; Romantic Features">Features the prettiest view of swans with Mount Fuji perfectly aligned in the backdrop.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DDxQD7durv1/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-22"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Known as 'Swan Beach,' this high-altitude spot on Lake Yamanaka offers expansive views of Mt. Fuji with a large resident swan population accustomed to humans.</p><p><strong>Special Notes: </strong>The lake is at an altitude of 980m, so it can get chilly and even freeze in winter. Exercise caution when feeding the swans as they are wild animals. Mt. Fuji is frequently obscured by clouds, so check weather visibility forecasts beforehand.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-23')">
+<td data-label="Spot Name">Rapunzel's Lantern Festival</td>
+<td data-label="Location">Fantasy Springs, Tokyo DisneySea</td>
+<td data-label="Description">A scenic and romantic boat tour through Rapunzel's "best day ever," culminating in the iconic lantern festival scene from Tangled.</td>
+<td data-label="Booking &amp; Access">Requires Tokyo DisneySea 1-Day Passport (approx. ¥7,900–¥9,400 in November). Access to Fantasy Springs may require a free Standby Pass or paid Disney Premier Access.</td>
+<td data-label="Distance / Transit">Take JR Keiyo Line from Tokyo Station to Maihama Station (15-20 min), then the Disney Resort Line monorail to DisneySea.</td>
+<td data-label="Timing / Hours">Park usually open 9:00 AM to 9:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features">A stunning, romantic boat ride filled with glowing lanterns and beautiful music, perfect for couples.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DAUx1f9M9Gx/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-23"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The world's first Tangled-themed attraction, located in Tokyo DisneySea's Fantasy Springs. It is a romantic 5-minute boat ride culminating in the iconic lantern scene.</p><p><strong>Special Notes: </strong>Requires a free Standby Pass or paid Disney Premier Access to enter, which sell out extremely fast upon park opening. Expect long wait times. Follow staff instructions and avoid flash photography or screens during the dark sections of the ride.</p><p><strong>Reference Links: </strong><a href="https://www.tokyodisneyresort.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-24')">
+<td data-label="Spot Name">Waka Kimono Rental</td>
+<td data-label="Location">Kyoto, Japan</td>
+<td data-label="Description">A magical kimono rental experience that includes the kimono, hairstyling, purse, and shoes for a full day of exploring Kyoto.</td>
+<td data-label="Booking &amp; Access">Full package is around $45 (approx. ¥6,500). Walk-ins possible, but booking in advance is highly recommended for peak November foliage.</td>
+<td data-label="Distance / Transit">Various kimono rental locations across Kyoto (e.g., Gion or near Kiyomizu-dera), easily accessible via Kyoto bus or subway.</td>
+<td data-label="Timing / Hours">Rentals are for the day; must return the kimono by 5:30 PM to avoid additional charges.</td>
+<td data-label="Highlights &amp; Romantic Features">Walking through Kyoto's historic temple streets dressed in beautiful traditional attire makes for a romantic and unforgettable memory.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DEz8qzFR8Vz/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-24"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Dressing in a traditional kimono involves many layers, an obi sash, tabi socks, and zori sandals. Walking the historic streets of Kyoto in kimono is a deeply immersive cultural experience.</p><p><strong>Special Notes: </strong>Book well in advance for morning slots to get the best patterns. Expect additional upgrade fees for premium designs. Zori sandals can be tough to walk in on hilly streets; consider taking taxis to save energy. In summer, opt for a lighter cotton yukata instead.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-25')">
+<td data-label="Spot Name">Kyoto City Exploration</td>
+<td data-label="Location">Kyoto, Japan</td>
+<td data-label="Description">The beautiful former capital city of Japan, famed for its ancient temples, shrines, and traditional wooden houses.</td>
+<td data-label="Booking &amp; Access">Free to explore the city; individual temples have their own admission fees.</td>
+<td data-label="Distance / Transit">Easily accessible via Shinkansen from Tokyo (approx. 2 hours 15 minutes, ~¥13,000–¥14,000).</td>
+<td data-label="Timing / Hours">City is open 24/7; most temples open 6:00 AM to 5:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features">Historic charm, traditional architecture, scenic alleyways, and breathtaking autumn leaves in November.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DFKXvwNT_q5/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-25"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Kyoto is incredibly safe but strict on rules to preserve its 1,000-year-old heritage. The city features thousands of classical Buddhist temples, gardens, and Shinto shrines.</p><p><strong>Special Notes: </strong>No eating while walking or littering; carry your trash. In the Gion district, photographing Geisha/Maiko without permission on private streets is strictly prohibited and can result in fines. Use IC cards for transit, but avoid taking large suitcases onto local buses.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-26')">
+<td data-label="Spot Name">Katsuoji Temple</td>
+<td data-label="Location">Minoo, Osaka</td>
+<td data-label="Description">Known as the "temple of winners" and the home of victorious Daruma Dolls, offering a unique 6-stamp Daruma postcard.</td>
+<td data-label="Booking &amp; Access">Admission is ¥500 for adults. No advance booking required.</td>
+<td data-label="Distance / Transit">Take the Midosuji Subway to Minoo-Kayano Station, then a 20-minute bus ride (Bus #30) to Katsuoji-mae.</td>
+<td data-label="Timing / Hours">Usually 8:00 AM to 5:00 PM (extended hours for special November weekend illuminations).</td>
+<td data-label="Highlights &amp; Romantic Features">Hundreds of red Daruma dolls, stunning November autumn foliage, and magical evening illuminations.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/C-xZCKQILzp/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-26"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Founded in 727, Katsuoji is the 'Temple of Victory' in Minoh, Osaka. The grounds are covered in thousands of Daruma dolls left by visitors who achieved their goals.</p><p><strong>Special Notes: </strong>Reached by bus from Minoo-kayano Station. Takes 1.5-2 hours to explore, with uphill walking. Maintain a respectful, quiet demeanor. Use the chozuya to purify your hands before entering, and do not step on the wooden thresholds of gates.</p><p><strong>Reference Links: </strong><a href="https://katsuo-ji-temple.or.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-27')">
+<td data-label="Spot Name">Onyado Nono Kyoto Shichijo</td>
+<td data-label="Location">Shimogyo Ward, Kyoto</td>
+<td data-label="Description">A ryokan-style hotel famous for its all-you-can-eat salmon roe (ikura) breakfast buffet and hot springs.</td>
+<td data-label="Booking &amp; Access">Prices range from ¥15,000 to over ¥40,000 per night in November. Book well in advance due to peak autumn season demand.</td>
+<td data-label="Distance / Transit">Located about a 7-minute walk from Kyoto Station.</td>
+<td data-label="Timing / Hours">24-hour reception; breakfast buffet times apply.</td>
+<td data-label="Highlights &amp; Romantic Features">Cozy tatami mat rooms, free amenities like night ramen, romantic onsen (hot springs), and incredible food right at the hotel.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DFuDdSDMAKZ/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-27"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A modern ryokan-style hotel just minutes from Kyoto Station. The entire property is covered in tatami mats, meaning guests walk barefoot or in socks after removing their shoes at the entrance.</p><p><strong>Special Notes: </strong>Offers excellent free perks like natural hot springs, evening ramen, and morning yogurt. Can get crowded during breakfast and bathing times. Some rooms might smell slightly of the tatami mats; ask the front desk to change rooms if needed.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-28')">
+<td data-label="Spot Name">Japan Travel &amp; Visa Tips</td>
+<td data-label="Location">Japan (General)</td>
+<td data-label="Description">General advice for a budget-friendly 10-day trip to Japan and smooth visa application tips via VFS Global for Indian travelers.</td>
+<td data-label="Booking &amp; Access">Visa processed in 2-5 working days. Can apply directly via VFS or trusted travel agents.</td>
+<td data-label="Distance / Transit">N/A</td>
+<td data-label="Timing / Hours">Best times to visit: Oct-Dec (fall) and Mar-May (cherry blossoms).</td>
+<td data-label="Highlights &amp; Romantic Features">Helpful planning tips to make your dream Japan trip romantic, smooth, and affordable.</td>
+<td data-label="Original Reel Link"><a href="https://www.instagram.com/p/DDjC_ctPLNe/" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-28"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japan does not offer visas on arrival. Visa-exempt countries get up to 90 days, while others must apply in advance via authorized centers.</p><p><strong>Special Notes: </strong>Strict laws regarding medications—some common cold or ADHD meds are illegal and require advance permission. Zero tolerance for illegal drugs. Do not follow street solicitors in nightlife districts like Kabukicho. Secure travel insurance for emergencies.</p><p><strong>Reference Links: </strong><a href="https://services.digital.go.jp/en/visit-japan-web/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-29')">
+<td data-label="Spot Name">Matsushima Izakaya (Kappou Matsushima)</td>
+<td data-label="Location">Minami-Otsuka, Toshima, Tokyo</td>
+<td data-label="Description">A highly-rated, intimate traditional counter-style restaurant run by an 85-year old man who lost his voice to cancer. He uses a tablet and a small board to communicate.</td>
+<td data-label="Booking &amp; Access">Very small (12 seats). Walk-ins or call ahead.</td>
+<td data-label="Distance / Transit">Short walk from Otsuka Station (JR Yamanote Line).</td>
+<td data-label="Timing / Hours">Dinner typically ¥3,000–¥3,999. Verify November hours.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DYv1U3ZSoZu/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-29"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>An intimate, high-end kappou dining experience in Minami-Otsuka, Tokyo, featuring only 12 seats where guests watch the chef prepare their meals.</p><p><strong>Special Notes: </strong>Located near Otsuka Station. Average dinner budget is JPY 3,000–4,000. Reservations are highly recommended due to the small size. Generally accepts credit cards but not QR payments. Do not confuse this with the 24-hour Matsushima izakaya chain.</p><p><strong>Reference Links: </strong><a href="https://tabelog.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-30')">
+<td data-label="Spot Name">Gotokuji Temple (Cat Village)</td>
+<td data-label="Location">Setagaya-ku, Tokyo</td>
+<td data-label="Description">Famous "Lucky Cat Temple" known for thousands of maneki-neko statues and the legend of the cat that saved a feudal lord. Beautiful autumn foliage in November.</td>
+<td data-label="Booking &amp; Access">Completely free entry. No tickets required.</td>
+<td data-label="Distance / Transit">10-12 min walk from Gotokuji Station (Odakyu Line) or 4-5 min walk from Miyanosaka Station.</td>
+<td data-label="Timing / Hours">6:00 AM to 5:00 PM (Temple Office 8:00 AM - 3:00 PM).</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DVn2Vr-EXsV/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-30"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Legendary birthplace of the maneki-neko (beckoning cat) from the 17th century. Home to thousands of white maneki-neko figurines with their right paw raised for good fortune. Features a historic cemetery, three-storied pagoda, and Japanese garden.</p><p><strong>Special Notes: </strong>Maintain silence and respectful behavior. Do not write on or vandalize the cat figurines. Taking photos is allowed but do not obstruct others. Bring cash for purchases.</p><p><strong>Reference Links: </strong><a href="https://tokyobecky.com, https://livejapan.com, https://japantoday.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-31')">
+<td data-label="Spot Name">Takaya Shrine (Torii in the Sky)</td>
+<td data-label="Location">Kagawa, Japan</td>
+<td data-label="Description">Famous for its "Torii in the Sky" offering breathtaking views of the Seto Inland Sea.</td>
+<td data-label="Booking &amp; Access">Private cars banned from the summit on weekends/holidays.</td>
+<td data-label="Distance / Transit">40-60 min intense hike from base on weekdays. On weekends/holidays in Nov, shuttle bus operates from Kotohiki Park (¥1,500 adult). Nearest train is JR Kan-onji Station.</td>
+<td data-label="Timing / Hours">Shuttle bus operates 9:30 AM to 4:00 PM on weekends/holidays.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DYv09aRSKcI/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-31"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Perched at 404 meters on Mt. Inazumi, offering a 'floating' torii gate against the sky and sea. Selected as one of the '88 Places in Shikoku'. Features 'Yurugi no Iwa', a large rock that moves when pushed but never topples.</p><p><strong>Special Notes: </strong>Sturdy walking or hiking shoes are essential for the steep climb. Weekends/holidays require taking a shuttle bus from Kotohiki Park. Private cars on weekdays face extremely narrow mountain roads.</p><p><strong>Reference Links: </strong><a href="Official Kagawa/Kanonji tourism websites" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-32')">
+<td data-label="Spot Name">Tateishi Park</td>
+<td data-label="Location">Suwa, Nagano</td>
+<td data-label="Description">A popular viewpoint known for panoramic views of Lake Suwa, resembling the anime film "Your Name". Popular for sunset and night views.</td>
+<td data-label="Booking &amp; Access">Free admission. Small parking lot available.</td>
+<td data-label="Distance / Transit">30-40 minute steep uphill walk from Kami-Suwa Station, or a 10-minute taxi ride.</td>
+<td data-label="Timing / Hours">Open 24/7.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DWOa77REYMM/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-32"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The real-world location that inspired Lake Itomori in the anime film 'Your Name'. Recognized as one of the 'Top 100 Shinshu Sunset Spots' and 'New Three Great Nightscapes of Japan'. Offers panoramic views of the Suwa basin.</p><p><strong>Special Notes: </strong>The parking lot is small and fills up quickly. If hiking from Kamisuwa Station, respect the quiet residential neighborhood. Use GPS for the 30-40 minute steep climb.</p><p><strong>Reference Links: </strong><a href="https://japanunfolded.com, https://travelynotes.com, https://trip.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-33')">
+<td data-label="Spot Name">Kawachi Wisteria Garden</td>
+<td data-label="Location">Kitakyushu, Fukuoka</td>
+<td data-label="Description">Known for its beautiful wisteria tunnels in spring, it's also open in November for stunning autumn maple leaves viewing.</td>
+<td data-label="Booking &amp; Access">Autumn entry is 600 yen. Advance reservations not mandatory like in spring, but check website.</td>
+<td data-label="Distance / Transit">Not well-served by public transit. 30-min taxi ride from JR Yahata Station recommended.</td>
+<td data-label="Timing / Hours">Open mid-Nov to early Dec for autumn foliage.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DYJqgzHNk6F/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-33"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Features iconic 80m and 110m wisteria tunnels with 22 varieties of wisteria. Founded by Masao Higuchi after 50 years of work. Selected by CNN as one of the '31 Most Beautiful Places in Japan'.</p><p><strong>Special Notes: </strong>Advance timed-entry reservations are mandatory during peak season. Not open year-round (only spring and autumn). No direct public transport; mostly accessible by car or taxi.</p><p><strong>Reference Links: </strong><a href="Official Kawachi Wisteria Garden website" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-34')">
+<td data-label="Spot Name">Kappabashi Street (Kappabashi Dogugai)</td>
+<td data-label="Location">Tokyo (between Ueno and Asakusa)</td>
+<td data-label="Description">A shopping street catering primarily to professional restaurateurs, offering ceramics, homeware, and souvenirs.</td>
+<td data-label="Booking &amp; Access">Public shopping street, no entry fee. Bring some cash for smaller stores.</td>
+<td data-label="Distance / Transit">5-minute walk from Tawaramachi Station (Ginza Line), or 15 mins from Asakusa Station. Standard Tokyo subway fares apply.</td>
+<td data-label="Timing / Hours">Shops mostly open 10:00 AM - 5:00 PM. Many close on Sundays and national holidays.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DYtb7MLpphX/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-34"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Established in the Taisho era, known as 'Kitchen Town'. Has over 200 shops selling restaurant supplies. Famous for hyper-realistic plastic food replicas (sampuru). The name is linked to the mythological kappa creature.</p><p><strong>Special Notes: </strong>Many traditional wholesalers are cash-only. Respect the professional environment as it is a working district. Operating hours vary, mostly closing by 5 PM, and some are closed on weekends.</p><p><strong>Reference Links: </strong><a href="Asakusa/Ueno tourism guides" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-35')">
+<td data-label="Spot Name">Katsuoji Temple</td>
+<td data-label="Location">Osaka, Japan</td>
+<td data-label="Description">Known as the "winning luck" temple, filled with thousands of Daruma dolls. Beautiful autumn foliage spot.</td>
+<td data-label="Booking &amp; Access">500 JPY entry for adults.</td>
+<td data-label="Distance / Transit">Take Midosuji Subway to Minoh-Kayano Station, then a 20-min Hankyu Bus (800 JPY) to the temple.</td>
+<td data-label="Timing / Hours">Weekdays 8:00 AM - 5:00 PM. In November weekends/holidays, open until 8:30 PM for autumn illuminations.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DYCXRLNNGvt/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-35"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Known as the 'Temple of Winning Luck' for victory in business, sports, and exams. Thousands of Daruma dolls are scattered around, left by pilgrims whose wishes were fulfilled. Offers a specialized 'Oracle Daruma Mikuji'.</p><p><strong>Special Notes: </strong>Wear comfortable walking shoes for mountain terrain. Use public buses or taxis to arrive; walking from nearby areas is dangerous. Bring cash or a pre-loaded IC card.</p><p><strong>Reference Links: </strong><a href="Official Katsuoji site" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-36')">
+<td data-label="Spot Name">Ghibli Park</td>
+<td data-label="Location">Nagakute, Aichi (near Nagoya)</td>
+<td data-label="Description">A theme park representing the world of Studio Ghibli, located within Expo 2005 Aichi Commemorative Park.</td>
+<td data-label="Booking &amp; Access">Tickets MUST be purchased in advance online. November tickets go on sale Sep 10th. Premium pass ~7,300 JPY.</td>
+<td data-label="Distance / Transit">Take Higashiyama Subway Line from Nagoya Station to Fujigaoka Station, then Linimo to Aichikyuhaku-kinen-koen Station (approx 50 mins).</td>
+<td data-label="Timing / Hours">Full-day activity. Check official site for specific dates.</td>
+<td data-label="Highlights &amp; Romantic Features"><a href="https://www.instagram.com/p/DU5zM1eFEfC/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-36"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Located in Expo 2005 Aichi Commemorative Park. Features no large-scale rides, but immersive recreations of famous film settings like 'My Neighbor Totoro' and 'Howl's Moving Castle'.</p><p><strong>Special Notes: </strong>Photography and videography are prohibited inside many indoor exhibits. Tickets must be reserved well in advance and entrance times are strictly enforced. Wear comfortable closed-toe walking shoes.</p><p><strong>Reference Links: </strong><a href="https://ghibli-park.jp, https://klook.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-37')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Wild Cherry Blossom Hostel</td>
+<td data-label="Location" style="padding: 12px 16px;">Koganei, Tokyo</td>
+<td data-label="Description" style="padding: 12px 16px;">A budget-friendly, peaceful hostel in a quiet, local residential neighborhood away from the busy center. Offers a relaxed atmosphere compared to party hostels.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Dynamic pricing depending on dates and room types. Book in advance directly or via platforms like Booking.com.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Approx. 5-minute walk from Musashi-Koganei Station (JR Chuo Line).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">24/7 (Check-in/out times apply).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DUNxV2kgbQw/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-37"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>An international, community-focused hostel in Koganei, Tokyo. Hosts Japanese cooking workshops and events. Staff offers multilingual support in over 10 languages.</p><p><strong>Special Notes: </strong>The 1F door is locked between 23:00 and 07:00. Remove shoes at the entrance and do not wear indoor slippers onto tatami mats. Avoid loud conversations during quiet hours.</p><p><strong>Reference Links: </strong><a href="https://wildcherryblossomhostel.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-38')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">(THISIS)SHIZEN</td>
+<td data-label="Location" style="padding: 12px 16px;">ShinPuhKan 1F, Kyoto</td>
+<td data-label="Description" style="padding: 12px 16px;">A popular botanical cafe famous for its stunning "Ice Bouquet" ice creams, featuring handcrafted bean paste toppings that resemble seasonal flowers.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Walk-ins only (no reservations). Ice Bouquets cost approx. ¥1,350 to ¥1,750. Often sell out by afternoon.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">1-minute walk from Karasuma Oike Station (Subway) or 8-minute walk from Hankyu Karasuma Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">10:00 AM – 7:00 PM (Daily).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DYtjGaxsTdj/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-38"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Located in the ShinPuhKan shopping complex in Kyoto, operating under the theme of 'Nature, Craft, Art'. Famous for 'Ice Bouquets'—ice cream cones decorated with edible flower-shaped bean paste.</p><p><strong>Special Notes: </strong>It is a standing-only space. In Kyoto, it is bad manners to eat or drink while walking; enjoy your treat within the shop's designated area. Arrive early as treats can sell out.</p><p><strong>Reference Links: </strong><a href="https://shinpuhkan.jp, https://trip.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-39')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Katsuoji Temple</td>
+<td data-label="Location" style="padding: 12px 16px;">Minoh, Osaka</td>
+<td data-label="Description" style="padding: 12px 16px;">A scenic temple famous for thousands of Daruma dolls and beautiful autumn foliage, offering a rewarding experience to collect stamps and make wishes.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Admission is 500 JPY for adults. Tickets available on-site or online.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Take the Midosuji Subway to Minoh-Kayano Station, then a 20-minute Hankyu Bus ride (approx. 800 yen).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">8:00 AM – 5:00 PM. Special November weekend/holiday evening illumination until 8:30 PM.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZHSX6ANWGa/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-39"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Known as the 'Temple of Winning Luck' for victory in business, sports, and exams. Thousands of Daruma dolls are scattered around, left by pilgrims whose wishes were fulfilled. Offers a specialized 'Oracle Daruma Mikuji'.</p><p><strong>Special Notes: </strong>Wear comfortable walking shoes for mountain terrain. Use public buses or taxis to arrive; walking from nearby areas is dangerous. Bring cash or a pre-loaded IC card.</p><p><strong>Reference Links: </strong><a href="Official Katsuoji site" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-40')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">TOKYO Night &amp; Light</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo Metropolitan Government Building, Shinjuku</td>
+<td data-label="Description" style="padding: 12px 16px;">Holds the Guinness World Record for the largest architectural projection mapping display. Features a special Pokémon light show on weekends.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free entry. No booking required. Arrive 20-30 minutes early for a spot on the lawn.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">10-minute walk from JR Shinjuku Station West Exit or direct access from Tochomae Station (Toei Oedo Line).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Shows every 15 minutes (7:30 PM - 9:45 PM). Pokémon shows on weekends/holidays at 6:30 PM, 7:30 PM, and 9:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZKhkJKRfc4/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-40"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Holds the Guinness World Record for the largest permanent architectural projection-mapped display (13,904 sqm). Features rotating artistic works including traditional ukiyo-e and Godzilla/Pokémon. Screenings held year-round every 30 minutes in the evening.</p><p><strong>Special Notes: </strong>Avoid using tripods that obstruct the view. There are mandatory bag checks if visiting the observation decks. Screenings are subject to cancellation during inclement weather.</p><p><strong>Reference Links: </strong><a href="https://tokyoprojectionmappingproject.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-41')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Kichijoji Petit Mura</td>
+<td data-label="Location" style="padding: 12px 16px;">Kichijoji, Tokyo</td>
+<td data-label="Description" style="padding: 12px 16px;">A fairytale-themed complex that feels like a scene from a Ghibli movie, complete with cute architecture and the popular Temari no Oshiro cat cafe.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Village entry is free. Cat cafe requires a fee (~1,200 JPY on weekdays, ~1,600 JPY on weekends). Booking online recommended for the cafe.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Approx. 6–7 minute walk from JR Kichijoji Station (North/East Exit).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Monday – Friday: 11:00 AM – 8:00 PM; Saturday – Sunday: 10:00 AM – 8:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DViuosAgXO6/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-41"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A storybook-themed complex in Kichijoji designed to look like a fairytale village with small doors and a cat café 'Temari no Oshiro' designed like a castle built by cats.</p><p><strong>Special Notes: </strong>Do not pick up or force interaction with the cats, and camera flashes are strictly prohibited. The café usually requires an entrance fee and a one-drink minimum.</p><p><strong>Reference Links: </strong><a href="https://thegate12.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-42')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Sado Island</td>
+<td data-label="Location" style="padding: 12px 16px;">Niigata, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A breathtaking island featuring stunning coastal drives, vast nature, and beautiful scenery. Offers a peaceful escape from the busy cities.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Jetfoil (~¥7,000 one-way) or Car Ferry (~¥2,900 one-way). Consider the "Sado Niigata Pass" for tourists.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Ferries depart from Niigata Port (15-min bus from Niigata Station) to Ryotsu Port. Renting a car on the island is highly recommended.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Ferries operate daily. The Jetfoil takes 67 minutes; the Car Ferry takes 2.5 hours. Check Sado Kisen website for schedules.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DYH16VTiv6a/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-42"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japan's second-largest offshore island, historically a place of exile for political figures. Famous for its Gold Mines (a UNESCO World Heritage Site) and the reintroduction of the Toki (Crested Ibis) bird.</p><p><strong>Special Notes: </strong>Renting a car is the best way to explore due to infrequent public transport. The ferry ride can cause motion sickness.</p><p><strong>Reference Links: </strong><a href="https://visitsado.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-43')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Mikami Shrine (Gokami-jinja)</td>
+<td data-label="Location" style="padding: 12px 16px;">Arashiyama, Kyoto</td>
+<td data-label="Description" style="padding: 12px 16px;">The only shrine in Japan dedicated to hair. Visitors can purchase a prayer envelope to offer a small strand of hair and pray for hair health.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free entry to the shrine. A small fee applies if purchasing the prayer envelope.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">2-minute walk from Torokko Arashiyama Station, or an 18-20 minute walk from JR Saga-Arashiyama Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Shrine office is typically open from 9:00 AM to 4:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DSFRI8WDwUi/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-43"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The only shrine in Japan dedicated to hair. Enshrines the historical founder of the hairdressing profession. Visitors can participate in a unique ritual offering a strand of their own hair to a hair mound.</p><p><strong>Special Notes: </strong>Very small and quiet shrine, not a bustling tourist spot. Shrine office usually open 9:00 AM to 4:00 PM. Follow Shinto etiquette and walk along the sides of the approach path.</p><p><strong>Reference Links: </strong><a href="https://sagano-kanko.co.jp" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-44')" style="background-color: #ffffff; border-bottom: 1px solid #EAEAEA; font-family: Inter, Helvetica, Arial, sans-serif;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Kinpeidou</td>
+<td data-label="Location" style="padding: 12px 16px;">Yokohama, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A 130-year-old traditional Japanese sweets shop famous for its handmade an-butter dorayaki (pancakes with red bean and butter).</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Walk-ins accepted. The famous An-Butter Dorayaki is approximately 248 JPY.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Approx. 872 meters (about a 10-12 minute walk) from Koganecho Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">9:00 AM – 6:00 PM. Closed on Tuesdays.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DY6_FD5J4b9/" style="color: #1A2247; text-decoration: underline;" target="_blank">View Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-44"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A small, local establishment in the Koganecho area of Yokohama, selling traditional Japanese sweets, cakes, and bread. Name is likely derived from traditional konpeito star-shaped candies.</p><p><strong>Special Notes: </strong>As a local shop, standard Japanese etiquette applies: be polite and considerate.</p><p><strong>Reference Links: </strong><a href="https://tabelog.com" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-45')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">teamLab Planets TOKYO</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Toyosu, Tokyo</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">An immersive, barefoot museum where visitors walk through water and mirrored floors. Often heals the inner child with glowing, sensory surprises.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Adults from 3,600 JPY. Must book in advance online as slots sell out fast. Lockers provided; avoid wearing skirts due to mirrored floors.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">1-min walk from Shin-Toyosu Station (Yurikamome Line), or 15-min walk from Toyosu Station (Yurakucho Line).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">Generally open daily. Experience takes ~2 hours.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DM_ZL-4Aibt/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-45"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Holds a Guinness World Record as the world's most visited museum dedicated to a single artist/group. Features 'body-immersive' interactive spaces, including a Floating Flower Garden with over 13,000 live orchids that react to your presence.</p><p><strong>Special Notes: </strong>A barefoot experience. Strongly recommended to wear pants that can be rolled up to the knee due to water wading areas, and avoid skirts/dresses due to mirrored floors. Book tickets well in advance.</p><p><strong>Reference Links: </strong><a href="https://planets.teamlab.art/tokyo/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-46')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Fuji Dream Bridge (Yumeno Ohashi)</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Fuji City, Shizuoka</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">A viral photography spot on a public road bridge offering crisp, breathtaking views of Mount Fuji.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Free public access. Respect local etiquette, keep noise to a minimum, and do not block traffic.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">Tokaido Shinkansen to Shin-Fuji Station, then a 10-min taxi or "Gurutto Fuji" city loop bus to "Kyūkyū Iryō Center-mae" stop, plus a 5-min walk.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">Open 24/7. Early mornings in November are highly recommended for the clearest views and fewest crowds.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DUddRuVEmHu/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-46"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>An overpass that creates an optical illusion where its staircase appears to lead directly to the summit of Mount Fuji, offering a rare, unobstructed view of the mountain from base to peak.</p><p><strong>Special Notes: </strong>Plagued by overtourism. You must strictly stay on the pedestrian walkway—do not enter the vehicle lanes or median for photos. Respect local residential areas and noise rules.</p><p><strong>Reference Links: </strong><a href="https://fujisan.ne.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-47')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Ine Fishing Village &amp; Amanohashidate</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Northern Kyoto</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">Scenic northern Kyoto spots featuring "Funaya" (traditional boathouses) in Ine and the famous Amanohashidate sandbar with spectacular views.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Viewing is free. Sea taxis in Ine cost ~1,000 JPY. Amanohashidate Kasamatsu Park ropeway tickets require purchase.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">Ine is a 40–60 min bus ride from Amanohashidate via the Tango Kairiku Kotsu bus.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">November offers a cool, tranquil vibe. Sightseeing boat operations run through the day.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DYm-EtVv4z1/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-47"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Ine is famous for its 230 traditional 'Funaya' (boat houses) with ground-floor boat garages. Amanohashidate is a sandbar with 5,000 pine trees, known as one of Japan's Three Scenic Views, traditionally viewed upside-down through one's legs.</p><p><strong>Special Notes: </strong>Ine is a working village; do not trespass onto private Funaya properties. Transport in this northern Kyoto region is infrequent, so verify bus and train schedules in advance.</p><p><strong>Reference Links: </strong><a href="https://www.amanohashidate.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-48')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Yajima Kyojima Tarai Bune</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Sado Island, Niigata</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">A unique opportunity to ride traditional wooden tub boats ("tarai bune") over emerald waters, resembling scenes from Studio Ghibli.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Adults ~600-700 JPY. Note: Yajima Kyojima operations generally close from November to March. Consider checking nearby Ogi Port as an alternative.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">From Ryotsu Port, it's a 60–70 min drive. From Ogi Port, ~5–8 mins. Local buses are available but infrequent.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">15-min ride duration. Typically closed in November.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DYz7sKSie7E/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-48"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Offers traditional 'Tarai Bune' (tub boat) rides in a picturesque cove connecting two islets. These unique boats were historically developed in the Meiji period for collecting abalone and seaweed.</p><p><strong>Special Notes: </strong>Follow the boatman's instructions and remain seated to maintain the boat's balance. Renting a car is recommended to reach this area, as local bus service on Sado Island is limited.</p><p><strong>Reference Links: </strong><a href="https://www.visitsado.com/en/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-49')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Ikoma Sanjo Amusement Park</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Ikoma, Nara</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">A charming, retro mountaintop amusement park with classic rides and panoramic views over Nara and Osaka.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Free admission. Individual rides cost ~300 JPY each, or unlimited ride passes are available.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">Kintetsu-Nara Line to Ikoma Station (10-15 mins), then transfer to the historic Ikoma Cable Car up to Ikomasanjo Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">Open mid-March to end of November (closes Dec 1). Usually closed on Thursdays.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DR7P2FGiDGO/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-49"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A historic, retro amusement park opened in 1929 at the summit of Mount Ikoma. Offers panoramic views of the Nara and Osaka plains and features Japan's oldest 'Flying Tower' ride. Entry is free.</p><p><strong>Special Notes: </strong>The park is closed during the winter season (early December to mid-March). Wear comfortable, grippy shoes as the mountain paths can be slippery.</p><p><strong>Reference Links: </strong><a href="http://www.ikomasanjou.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-50')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Shibuya Sky</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Shibuya, Tokyo</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">A spectacular 360-degree open-air observation deck. In winter/early spring, you can catch views of Mount Fuji at sunset.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Adults 2,700-3,400 JPY online. Must book exactly 14 days in advance as sunset slots sell out instantly.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">Direct connection from Shibuya Station (via JR, Tokyo Metro, or Keio lines). Take the elevator to the 14th-floor entrance.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">10:00 – 22:30 (last entry 21:20). Best booked 45-60 mins before sunset.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DY8Oo74zH9c/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-50"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A 229-meter high observation deck providing 360-degree open-air panoramic views of Tokyo, including the famous Shibuya Scramble Crossing below, and interactive spots like the 'Sky Edge'.</p><p><strong>Special Notes: </strong>Strict luggage policy: all bags, food, hats, scarves, and tripods must be stored in 46th-floor lockers. Cameras must have a neck strap or fit in your pocket. Advance online booking is essential.</p><p><strong>Reference Links: </strong><a href="https://www.shibuya-scramble-square.com/sky/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-51')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Tashirojima (Cat Island)</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Ishinomaki, Miyagi</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">A famous island populated by hundreds of friendly cats, offering a peaceful, cat-filled adventure away from the city.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">No entry fee, but ferry costs ~1,250 JPY one-way (cash only). First-come, first-served. Bring your own food/water.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">JR train to Ishinomaki Station, then a 10-min walk to Ajishima Line Chuo Ferry Terminal. Ferry connects Ishinomaki to Tashirojima.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">Ferries are subject to weather, especially in breezy November. An overnight stay in Ishinomaki is recommended for day trips.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DYPbZ6mgper/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-51"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Known as 'Cat Island', free-roaming cats outnumber the human residents here. Cats were initially kept to protect silkworm farms and later revered for good luck. The island even features a Cat Shrine.</p><p><strong>Special Notes: </strong>Pet dogs are strictly prohibited to protect the cats. Do not force interactions with the cats and refrain from entering private residential property. Facilities are limited; bring necessary food and cash.</p><p><strong>Reference Links: </strong><a href="https://visitmiyagi.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-52')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px; font-family: sans-serif;">Private Temples</td>
+<td data-label="Location" style="padding: 12px 16px; font-family: sans-serif;">Kyoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px; font-family: sans-serif;">Hidden, private traditional Japanese temples available for special occasions like photography or surprise proposals away from the crowds.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px; font-family: sans-serif;">Private bookings required through specialized photographers or event planners. Prices vary.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px; font-family: sans-serif;">Various private locations around Kyoto accessible by local transit or taxi.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px; font-family: sans-serif;">Varies by arrangement and booking.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px; font-family: sans-serif;"><a href="https://www.instagram.com/p/DZZ1jrXBqc4/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-52"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Kyoto is home to numerous hidden, private temples that open only for exclusive viewings or seasonal periods, offering highly meditative and intimate experiences away from the main tourist crowds.</p><p><strong>Special Notes: </strong>Absolute quietness and reverence are expected. Shoes must often be removed (wear clean socks), and photography inside the temple buildings is almost always strictly prohibited.</p><p><strong>Reference Links: </strong><a href="https://kyoto.travel/en/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-53')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Sumida River Fireworks</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A historic fireworks display over the Sumida River originating in 1733, famous for its spectacular spark walls.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free viewing from public areas. Reserved seats available for purchase.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">5-10 minute walk from Asakusa or Ryogoku stations.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Held annually in July (No November dates).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DY4GnDjzTCM/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-53"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Dating back to 1733, this is one of Tokyo's largest and most historic summer traditions, featuring approximately 20,000 fireworks launched over the Sumida River and drawing nearly a million attendees.</p><p><strong>Special Notes: </strong>Expect extreme, shoulder-to-shoulder crowds. For safety reasons, police strictly prohibit standing still on the bridges during the event. Arrive very early and do not use tape to reserve public space.</p><p><strong>Reference Links: </strong><a href="https://www.sumidagawa-hanabi.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-54')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Adashino Nenbutsuji Bamboo Grove</td>
+<td data-label="Location" style="padding: 12px 16px;">Kyoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A peaceful, far less crowded alternative to the Arashiyama Bamboo Grove, featuring thousands of historic stone statues.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">¥500 admission fee (cash only). No reservation required.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">25-30 minute walk from JR Saga-Arashiyama Station (walking recommended to avoid heavy November autumn traffic).</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">9:00 AM - 4:30 PM</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DWq97MkDUGw/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-54"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>An 8th-century temple housing 8,000 stone grave markers for departed souls without kin. It features a stunning, serene bamboo grove that is much less crowded than the main Arashiyama grove.</p><p><strong>Special Notes: </strong>This is an active, sacred memorial site, not a public park. Maintain silence and deep respect. An entrance fee is required, and access is restricted to temple operating hours.</p><p><strong>Reference Links: </strong><a href="http://www.nenbutsuji.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-55')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Hie Shrine</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A quiet Tokyo alternative to Fushimi Inari, offering a beautiful tunnel of red torii gates.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free entry year-round. No reservations needed.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">3-5 minute walk from Tameike-sannō Station or Akasaka Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">6:00 AM - 5:00 PM</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DWq97MkDUGw/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-55"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A historic Shinto shrine standing in striking contrast to the modern office buildings of Akasaka. It serves as a peaceful urban sanctuary characterized by an impressive tunnel of Torii gates.</p><p><strong>Special Notes: </strong>Bow slightly before passing through Torii gates and walk on the sides of the path, leaving the center for the deity. Maintain a low voice and avoid eating or drinking on the shrine grounds.</p><p><strong>Reference Links: </strong><a href="https://www.hiejinja.net/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-56')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Glanta</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A popular jewelry shop where you can craft matching rings, perfect for unique honeymoon souvenirs.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">"My Ring" from ¥980 (no reservation); "Work Shop" starts higher (reservation highly recommended for November).</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Multiple locations (Omotesando, Kichijoji, Shimokitazawa), all a short walk from their respective stations.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Open daily; workshop experience takes approx. 1 hour.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DWmRGSDj3DI/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-56"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A popular Japanese jewelry brand offering highly accessible crafting experiences, where artisans can hammer a custom-sized ring for you in minutes, or you can join a workshop to forge your own ring.</p><p><strong>Special Notes: </strong>Reservations are highly recommended for the hands-on workshops. As these are handmade fashion accessories, they may require care to prevent scratching or tarnishing compared to fine heirloom jewelry.</p><p><strong>Reference Links: </strong><a href="https://www.kochentertainment.com/glanta/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-57')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Shinkansen Mt. Fuji View (Seats D-E)</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo to Osaka Route</td>
+<td data-label="Description" style="padding: 12px 16px;">Enjoy the best views of Mount Fuji from the comfort of the Shinkansen by booking window seats D or E.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Standard Shinkansen ticket (approx ¥14,000 - ¥15,000). Book via SmartEX or ticket office.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Tokaido Shinkansen running between Tokyo and Osaka.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Frequent trains daily; daytime recommended for visibility.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DWMSWX3E3V6/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-57"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>On the Tokaido Shinkansen route, Mount Fuji becomes visible for a brief, spectacular 30 to 60-second window approximately 40-45 minutes after departing Tokyo.</p><p><strong>Special Notes: </strong>Book Seat E in standard cars (or Seat D in Green cars) to guarantee a window seat on the mountain side. Visibility is highly dependent on weather; winter months offer the clearest views.</p><p><strong>Reference Links: </strong><a href="https://smart-ex.jp/en/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-58')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Kenninji Temple &amp; Yasaka Tower</td>
+<td data-label="Location" style="padding: 12px 16px;">Kyoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">Iconic cultural and historic spots in the Higashiyama district, offering classic Kyoto streetscapes.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Kenninji admission ~¥600; Yasaka Tower area is public, inner entry ~¥400.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Accessible via Keihan Line (Gion-Shijo Station) followed by a 10-15 minute walk.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Generally 10:00 AM - 4:00 PM.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZOcve-B84B/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-58"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Kenninji is Kyoto's oldest Zen temple, famous for its dramatic 'Twin Dragons' ceiling mural. Nearby, Yasaka Tower is a striking five-story pagoda and a highly photographed symbol of the Higashiyama district.</p><p><strong>Special Notes: </strong>Remove shoes when entering Kenninji's buildings. When photographing Yasaka Tower, do not block the narrow residential streets, hinder traffic, or trespass onto private property.</p><p><strong>Reference Links: </strong><a href="https://kyoto.travel/en/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-59')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Kamishikimi Kumanoza Shrine</td>
+<td data-label="Location" style="padding: 12px 16px;">Kumamoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A secluded, atmospheric shrine famous for its 280 moss-covered stone steps and magical forest setting.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free admission. No booking required.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">1.5 - 2 hour drive from Kumamoto City, or bus from Takamori Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Open 24/7 (best visited during daylight hours).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DP89Ax4kvwQ/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-59"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A mystical, forest-shrouded shrine known for its approach lined with 100 moss-covered stone lanterns and the massive Ugetoiwa rock arch. It famously inspired the setting for the anime 'Hotarubi no Mori e'.</p><p><strong>Special Notes: </strong>The approach requires climbing roughly 270 steep stone steps, which can be slippery when wet. Walk on the sides of the path to respect the deities. Check limited local transport schedules carefully.</p><p><strong>Reference Links: </strong><a href="https://kumamoto.guide/en/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-60')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Oiwa Shrine</td>
+<td data-label="Location" style="padding: 12px 16px;">Kyoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">An abandoned, hidden mountain shrine known for its quiet, adventurous hiking trail and overgrown torii gates.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free. Unmaintained site, proceed at your own risk.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">30-40 minute hike from JR Fujinomori or Keihan Fujinomori Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Open 24/7 (daylight hiking only).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DP89Ax4kvwQ/" style="color: #1A2247; text-decoration: underline;" target="_blank">Original Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-60"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The shrine has been largely abandoned since around 2015, with nature reclaiming the site to create an eerie, Angkor Wat-like atmosphere. It features a highly decorated and unique torii gate designed by the renowned Kyoto artist Doumoto Insho. The mountain was historically a site of ancient nature worship and has ties to the first Tokugawa Shogun.</p><p><strong>Special Notes: </strong>The path involves hiking through overgrown woods and uneven ground; proper footwear is essential. In warmer months, be aware of mosquitoes and venomous pit vipers (mamushi) in the area. Despite its abandoned state, it remains a sacred site; maintain a respectful attitude and do not touch sacred objects.</p><p><strong>Reference Links: </strong><a href="https://www.hiddenpathskyoto.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-61')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Anime Merchandise</td>
+<td data-label="Location" style="padding: 12px 16px;">San Jose, California</td>
+<td data-label="Description" style="padding: 12px 16px;">Naruto and One Piece items. Not a Japanese travel spot.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">N/A</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">N/A</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">N/A</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DV7ld4xD-cZ/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-61"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>San Jose's Japantown (Nihonmachi) is one of the last three historic Japantowns remaining in the United States. Nikaku Animart is the primary spot for anime in the area and is one of the oldest stores of its kind in the U.S. It is often confused with San Francisco's Japantown, which has a much larger concentration of dedicated anime-specific retail chains like Kinokuniya.</p><p><strong>Special Notes: </strong>The selection of dedicated anime merchandise is more limited compared to San Francisco. If you are looking for the latest rare figures, locals often recommend visiting larger regional shopping centers like Westfield Valley Fair.</p><p><strong>Reference Links: </strong><a href="https://www.sanjose.org/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-62')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Domyo Kumihimo Experience</td>
+<td data-label="Location" style="padding: 12px 16px;">Kagurazaka, Tokyo</td>
+<td data-label="Description" style="padding: 12px 16px;">Traditional Japanese braided cord (Kumihimo) crafting workshop, popularized by the movie "Your Name".</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Standard course approx. 6,600 JPY. Advance booking via website or Klook required.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Short walk from Kagurazaka or Ushigome-Kagurazaka Stations.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Pre-booked sessions only.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DX1X8T8I8Xa/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-62"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Domyo is a prestigious studio with over 370 years of history, having been founded in 1652. Participants learn the ancient Japanese art of kumihimo (braided silk cords) using authentic tools and 100% silk. Kumihimo is considered a meditative practice and was historically used by samurai for spiritual training.</p><p><strong>Special Notes: </strong>Reservations are required, and cancellations made on the day of the booking incur a 100% charge. The studio does not have parking for vehicles or bicycles. Visitors are encouraged to maintain a calm, quiet demeanor in line with the meditative nature of the craft.</p><p><strong>Reference Links: </strong><a href="https://kdomyo.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-63')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">LUUP E-Scooters</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo, Osaka, Kyoto, Yokohama</td>
+<td data-label="Description" style="padding: 12px 16px;">E-scooter and e-bike sharing service useful for "last mile" travel across major cities.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Requires LUUP app and credit card. Base fee + per-minute charge (e.g., ~50 JPY base + 15 JPY/min).</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Ports available city-wide.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">24/7</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DSCF8adCOH2/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-63"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>LUUP is a popular micro-mobility e-scooter service in Japan. No driver's license is required, but riders must be 16 years or older and register with a government-issued ID. Before riding, users must pass a traffic rules test within the app with a 100% score.</p><p><strong>Special Notes: </strong>E-scooters must be ridden on the road (left side), not on sidewalks. Riders must perform 'two-stage right turns' at intersections. Strict penalties and account suspensions apply for riding under the influence, tandem riding, or using phones while riding.</p><p><strong>Reference Links: </strong><a href="https://luup.sc/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-64')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Shirakawa-go</td>
+<td data-label="Location" style="padding: 12px 16px;">Gifu Prefecture</td>
+<td data-label="Description" style="padding: 12px 16px;">Historic UNESCO village famous for traditional gassho-zukuri thatched-roof houses and vast nature.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Adult one-way bus fare from Takayama is approx. 2,800 JPY. Advance reservation via Japan Bus Online recommended.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Approx. 50 mins to 1 hr 40 mins via Nohi Bus from Takayama Nohi Bus Center.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Best visited during daylight hours.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DYNag1Gsh-g/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-64"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Shirakawa-go is a UNESCO World Heritage site renowned for its gassho-zukuri (praying hands) farmhouses. Many of the houses are over 250 years old, built without nails, and designed to shed heavy winter snow. It is a living village, serving as home to nearly 500 residents.</p><p><strong>Special Notes: </strong>Respect private property: Do not enter private premises, fields, or houses, and do not peek through windows. Littering, camping, fireworks, and flying drones are strictly prohibited. Winter streets can be very slippery and fresh snow may obscure hidden ditches; wear appropriate footwear.</p><p><strong>Reference Links: </strong><a href="https://www.shirakawa.lg.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-65')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Photography Service</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo / Hokkaido / Nagano</td>
+<td data-label="Description" style="padding: 12px 16px;">Bilingual photographer offering cinematic portraits for travelers.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">N/A</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">N/A</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">N/A</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DSScm9PgdNe/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-65"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Japan places a high value on 'portrait rights' (shozoken), emphasizing privacy and avoiding causing trouble (meiwaku) to others. Professional photo shoots at popular parks, shrines, and historic districts often require advance permits and fees.</p><p><strong>Special Notes: </strong>Always ask for permission before photographing individuals, particularly craftspeople or children. Tripods and selfie sticks are often banned in crowded spots, shrines, and train platforms. Photography is strictly prohibited inside onsens, changing rooms, and certain sacred shrine areas.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-66')" style="background-color: white; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Switzerland Video</td>
+<td data-label="Location" style="padding: 12px 16px;">Switzerland</td>
+<td data-label="Description" style="padding: 12px 16px;">Showcases Switzerland, not Japan.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">N/A</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">N/A</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">N/A</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZGOSJgTbLc/" target="_blank">Reel Link</a></td>
+</tr>
+<tr class="details-row hidden" id="row-66"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Switzerland has a highly organized, safe, but famously expensive travel environment. The country has a world-class public transport system combining trains, buses, and boats. Tap water and public fountains marked 'Trinkwasser' are perfectly safe to drink across the country.</p><p><strong>Special Notes: </strong>Jaywalking is illegal and can result in on-the-spot police fines. You are required to carry a valid ID (like a passport) at all times. Respect 'quiet hours' and 'quiet carriages' on trains, as excessive noise is discouraged.</p><p><strong>Reference Links: </strong><a href="https://www.myswitzerland.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-67')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Nittele Tower Miyazaki Clock</td>
+<td data-label="Location" style="padding: 12px 16px;">Tokyo, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A giant steampunk clock designed by Hayao Miyazaki featuring mechanical figures.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Completely free, no tickets required (Standard Nov Pricing).</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">2 min walk from Shiodome or Shimbashi Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Shows start 3 mins before 12pm, 1pm, 3pm, 6pm, 8pm (Extra 10am on weekends).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZVPBgRxz5m/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-67"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The clock was designed by Studio Ghibli co-founder Hayao Miyazaki and built by Kunio Shachimaru. It is a massive 28-ton steampunk-style structure featuring over 30 mechanical vignettes. It frequently draws comparisons to the aesthetics of 'Howl's Moving Castle'.</p><p><strong>Special Notes: </strong>It performs several times a day (usually 12 PM, 3 PM, 6 PM, 8 PM), with performances starting four minutes before the hour. It is located in a public area with no admission fee. Visitors should arrive early for a good viewing spot and ensure they do not obstruct public walkways.</p><p><strong>Reference Links: </strong><a href="https://www.atlasobscura.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-68')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Japan Food Bucket List Spots</td>
+<td data-label="Location" style="padding: 12px 16px;">Japan (Various)</td>
+<td data-label="Description" style="padding: 12px 16px;">Compilation of iconic spots: Imopipi in Asakusa, Ichiran Ramen, Maikoya Kyoto.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Varies by spot (e.g. standard meal costs ~¥1000-¥2000 in Nov).</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Various transit routes across Tokyo, Kyoto, Osaka.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Varies by establishment.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DX8Lo2Ghe7R/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-68"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Traditional Japanese cuisine (washoku) is recognized on the UNESCO Intangible Cultural Heritage list. Tokyo consistently holds the title for having more 3-star Michelin restaurants than any other city globally. The concept of 'umami' (the fifth taste) originated in Japan.</p><p><strong>Special Notes: </strong>There is no tipping culture in Japan; leaving a tip can be confusing or considered rude. Never stick chopsticks upright in a bowl of rice or pass food directly from chopstick to chopstick. Always say 'Itadakimasu' before eating and 'Gochisosama deshita' after your meal.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-69')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Sagan Kyoto</td>
+<td data-label="Location" style="padding: 12px 16px;">Kyoto, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">A nostalgic cafe in the Higashiyama area known for a relaxing vibe.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Around ¥1,000–¥2,000 per person. Expect autumn crowds in Nov.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Short walk from Kiyomizu-Gojo Station.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Standard cafe hours.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZPzvxFuvME/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-69"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>SAGAN is a minimalist cafe blending traditional Japanese aesthetics with modern design in the Rokurocho district. It is widely regarded as a tranquil sanctuary away from Kyoto's busy tourist areas. The menu specializes in Japanese-Western fusion breakfasts and specialty coffee.</p><p><strong>Special Notes: </strong>Maintain low noise levels to respect the reflective atmosphere of the cafe. Punctuality is expected if you have made a reservation. Do not confuse it with 'Saganoyu', a different cafe located in a former public bathhouse.</p><p><strong>Reference Links: </strong><a href="https://tabelog.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-70')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Goshuin (Sacred Seals)</td>
+<td data-label="Location" style="padding: 12px 16px;">Shrines/Temples, Japan</td>
+<td data-label="Description" style="padding: 12px 16px;">Collecting unique calligraphy seals in a Goshuincho notebook.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Usually ¥300–¥1,000 per seal (Standard Nov Pricing).</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Available at most major shrines and temples.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">During temple/shrine visiting hours (usually 9am - 4pm).</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DYxvfO5SZLJ/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-70"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>A goshuin is a hand-brushed calligraphy stamp serving as proof of pilgrimage to a Buddhist temple or Shinto shrine. They are collected in a dedicated accordion-style book called a goshuincho. They typically feature the name of the site, the date of the visit, and a sacred seal.</p><p><strong>Special Notes: </strong>This is not a stamp rally; you must pray and pay respects at the main hall before requesting a goshuin. Never place secular commemorative stamps (like train station stamps) in your goshuincho. Always carry exact cash (usually 300-500 yen) and do not gift your collected goshuin to others.</p><p><strong>Reference Links: </strong><a href="https://goshuin.com/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-71')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Tobishima Yoi no Akari</td>
+<td data-label="Location" style="padding: 12px 16px;">Tobishima Village, Aichi</td>
+<td data-label="Description" style="padding: 12px 16px;">Beautiful wind chime and LED illumination event.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Free admission. Note: This is a summer event; in Nov, look for "Tobishima Lights".</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">Meitetsu train to Kanie Station, then local bus.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Typically 19:30 - 22:00 during the event period.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DZZnr5pghjV/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-71"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>Tobishima Yoi no Akari is a summer evening event celebrating the village with thousands of wind chimes illuminated by LEDs. The main attraction is a Wind Chime Tunnel featuring 600 glass chimes lit by 30,000 LED bulbs. The paper strips (tanzaku) on the chimes feature wishes written by local children and children from disaster-affected areas.</p><p><strong>Special Notes: </strong>Admission is free, but parking is limited; visitors must use designated hall parking lots. Do not drive on roads marked as 'local roads' (jimoto doro) as they are strictly for residents. Maintain public harmony by keeping noise levels down and taking all your trash home.</p><p><strong>Reference Links: </strong><a href="https://www.vill.tobishima.aichi.jp/" target="_blank">Official Link / More Info</a></p></div></td></tr>
+<tr class="main-row" onclick="toggleDetails('row-72')" style="background-color: #FFFFFF; border-bottom: 1px solid #EAEAEA;">
+<td data-label="Spot Name" style="padding: 12px 16px;">Hiroshima to Kyoto Route</td>
+<td data-label="Location" style="padding: 12px 16px;">Hiroshima / Kyoto</td>
+<td data-label="Description" style="padding: 12px 16px;">Scenic travel route between two historical cities.</td>
+<td data-label="Booking &amp; Access" style="padding: 12px 16px;">Shinkansen tickets cost approx. ¥11,000 in Nov.</td>
+<td data-label="Distance / Transit" style="padding: 12px 16px;">~1.5 hours via Tokaido-Sanyo Shinkansen.</td>
+<td data-label="Timing / Hours" style="padding: 12px 16px;">Frequent train departures throughout the day.</td>
+<td data-label="Highlights &amp; Romantic Features" style="padding: 12px 16px;"><a href="https://www.instagram.com/p/DVQUbIMkvmH/" target="_blank">Instagram Reel</a></td>
+</tr>
+<tr class="details-row hidden" id="row-72"><td colspan="8"><div class="expanded-card"><h4>Deep Dive</h4><p><strong>Facts: </strong>The fastest and most popular way to travel between Hiroshima and Kyoto is the Sanyo Shinkansen (bullet train). Direct Shinkansen travel between the two cities typically takes 1.5 to 2 hours. Both Hiroshima and Kyoto stations are major transit hubs equipped with extensive dining and shopping options.</p><p><strong>Special Notes: </strong>If you are traveling with large suitcases, you must book specific 'oversized baggage' seats in advance. Some regional rail passes may not cover the direct Shinkansen route, potentially requiring a transfer at Shin-Osaka. Book tickets well in advance during peak travel periods like Golden Week or cherry blossom season.</p><p><strong>Reference Links: </strong><a href="#" target="_blank">Official Link / More Info</a></p></div></td></tr>
+</tbody>
+</table>
+</div>
+<script>
+    function toggleDetails(rowId) {
+        const detailsRow = document.getElementById(rowId);
+        if (detailsRow) {
+            detailsRow.classList.toggle('hidden');
+        }
+    }
+</script>
+<canvas id="sakura-canvas"></canvas><script>
+    // Sakura falling effect
+    const canvas = document.getElementById('sakura-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const petals = [];
+    const petalCount = 15; // Reduce for mobile performance if needed
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    class Petal {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height - height;
+            this.w = 10 + Math.random() * 15;
+            this.h = 10 + Math.random() * 15;
+            this.opacity = (this.w / 25) * 0.5;
+            this.speedX = 1 + Math.random() * 2;
+            this.speedY = 1 + Math.random() * 2;
+            this.rotation = Math.random() * 360;
+            this.rotationSpeed = (Math.random() - 0.5) * 5;
+        }
+        draw() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation * Math.PI / 180);
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = '#ffb7c5';
+            ctx.beginPath();
+            // Draw a basic petal shape
+            ctx.moveTo(0, 0);
+            ctx.bezierCurveTo(this.w/2, -this.h/2, this.w, 0, 0, this.h);
+            ctx.bezierCurveTo(-this.w, 0, -this.w/2, -this.h/2, 0, 0);
+            ctx.fill();
+            ctx.restore();
+        }
+        update() {
+            this.y += this.speedY;
+            this.x += this.speedX;
+            this.rotation += this.rotationSpeed;
+            if (this.y > height + this.h) {
+                this.y = -this.h;
+                this.x = Math.random() * width;
+            }
+            if (this.x > width + this.w) {
+                this.x = -this.w;
+            }
+        }
+    }
+
+    for (let i = 0; i < petalCount; i++) {
+        petals.push(new Petal());
+    }
+
+    function animateSakura() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < petals.length; i++) {
+            petals[i].update();
+            petals[i].draw();
+        }
+        requestAnimationFrame(animateSakura);
+    }
+    animateSakura();
+
+    // Intersection Observer for smooth scroll-reveal
+    document.addEventListener("DOMContentLoaded", () => {
+        const rows = document.querySelectorAll('.main-row');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Stop observing once visible to keep it shown
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        rows.forEach(row => observer.observe(row));
+    });
+    </script></body>
+</html>
